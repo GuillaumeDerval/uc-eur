@@ -1,0 +1,17 @@
+# Generated instances: ~180 MB and fully reproducible from the code
+# (`python generate_batch.py` etc. — see README §4).
+instances/
+instances_*/
+
+# Downloaded source datasets: ~220 MB, fetched on demand and cached
+data/cache/
+
+# Julia environment resolution
+julia/Manifest.toml
+
+__pycache__/
+*.pyc
+.pytest_cache/
+solution.json
+gurobi.log
+.DS_Store
