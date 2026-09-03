@@ -163,12 +163,25 @@ Output layout:
 ```
 instances/
   index.json                      the whole set, the screen, and the options used
-  results.json                    written by solve_all.jl
+  results.json                    written by solve_all.jl (not in git)
   BE/
-    BE_2019_w20.json              the instance
+    BE_2019_w20.json.gz           the instance
     BE_2019_w20.summary.json      what is inside it
     ...
 ```
+
+Instances are stored gzipped -- UnitCommitment.jl reads them directly, as its
+own benchmark instances ship that way, and every script here discovers
+`.json.gz` too. The three sets committed to this repository are:
+
+| Set | Contents |
+|---|---|
+| `instances/` | 23 EU countries x 5 weeks of 2019 (115) |
+| `instances_BE_52weeks/` | Belgium, every week of 2019 (52) |
+| `instances_BE_outages/` | Belgium week 44: baseline + 50 variants each missing 1-2 units (51) |
+
+The downloaded source datasets (~220 MB) are **not** in the repository; they
+are re-fetched into `data/cache/` on first use.
 
 ### A full year for one country
 
