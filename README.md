@@ -219,6 +219,21 @@ uniformly zero-shedding**: taking 1-2 stations out of a fleet that already
 leans on capped historical imports can genuinely leave a week unservable, which
 is much of the point. `results.json` records which variants shed and how much.
 
+### Describing a set
+
+`describe_instances.py` writes a `README.md` into every instance directory: an
+overview table per set and a row per instance underneath, with country, start
+date, horizon, buses, branches, committable units and capacity, peak and total
+demand, net imports, and the outcome of the last `solve_all.jl` run. It reads
+only the `.summary.json` files, so it is safe to re-run at any time:
+
+```bash
+python describe_instances.py instances instances_BE_52weeks instances_BE_outages
+```
+
+For an outage family the table replaces country and date with the units removed
+and the capacity lost, since those are what vary.
+
 ### Measuring congestion
 
 `julia/congestion.jl` solves each instance twice, once as generated and once
@@ -486,6 +501,7 @@ optimiser takes the option that is 13x cheaper, and the result persists at a
 generate.py                CLI for a single instance
 generate_batch.py          eligibility screen + the per-country benchmark set
 generate_outages.py        an outage family: one week, varying available units
+describe_instances.py      README.md tables for every instance directory
 pypsa_uc_gen/sources.py    fetches and caches the seven datasets
 pypsa_uc_gen/build.py      datasets -> pypsa.Network, with a provenance report
 pypsa_uc_gen/convert.py    pypsa.Network -> UnitCommitment.jl 0.4
