@@ -1,0 +1,781 @@
+{
+ "family": {
+  "country": "BE",
+  "year": 2019,
+  "week": 44,
+  "hours": 168,
+  "seed": 0,
+  "max_removed": 2,
+  "variants": 51,
+  "failed": 0,
+  "note": "identical demand, weather, grid and imports; only the available thermal units differ"
+ },
+ "fleet": [
+  {
+   "uid": "Marcinelle Energie Carsid",
+   "carrier": "CCGT",
+   "p_nom_MW": 413.0
+  },
+  {
+   "uid": "Rodenhuize",
+   "carrier": "solid biomass",
+   "p_nom_MW": 205.0
+  },
+  {
+   "uid": "Drogenbos",
+   "carrier": "CCGT",
+   "p_nom_MW": 460.0
+  },
+  {
+   "uid": "Ringvaart",
+   "carrier": "CCGT",
+   "p_nom_MW": 385.0
+  },
+  {
+   "uid": "Saint Ghislain",
+   "carrier": "CCGT",
+   "p_nom_MW": 350.0
+  },
+  {
+   "uid": "Beringen",
+   "carrier": "CCGT",
+   "p_nom_MW": 422.0
+  },
+  {
+   "uid": "Herdersbrug",
+   "carrier": "CCGT",
+   "p_nom_MW": 465.0
+  },
+  {
+   "uid": "Inesco",
+   "carrier": "CCGT",
+   "p_nom_MW": 138.0
+  },
+  {
+   "uid": "Scheldelaan Exxonmobil",
+   "carrier": "CCGT",
+   "p_nom_MW": 140.0
+  },
+  {
+   "uid": "Aalst Syral",
+   "carrier": "CCGT",
+   "p_nom_MW": 48.0
+  },
+  {
+   "uid": "Beerse",
+   "carrier": "oil",
+   "p_nom_MW": 33.0
+  },
+  {
+   "uid": "Zwijndrecht Lanxess",
+   "carrier": "CCGT",
+   "p_nom_MW": 58.0
+  },
+  {
+   "uid": "Doel 1",
+   "carrier": "nuclear",
+   "p_nom_MW": 454.0
+  },
+  {
+   "uid": "Doel 2",
+   "carrier": "nuclear",
+   "p_nom_MW": 454.0
+  },
+  {
+   "uid": "Doel 4",
+   "carrier": "nuclear",
+   "p_nom_MW": 1090.0
+  },
+  {
+   "uid": "Tihange 3",
+   "carrier": "nuclear",
+   "p_nom_MW": 1089.0
+  },
+  {
+   "uid": "Zandvliet",
+   "carrier": "CCGT",
+   "p_nom_MW": 386.2
+  },
+  {
+   "uid": "Tihange 1",
+   "carrier": "nuclear",
+   "p_nom_MW": 1009.0
+  },
+  {
+   "uid": "Tihange 2",
+   "carrier": "nuclear",
+   "p_nom_MW": 1055.0
+  },
+  {
+   "uid": "Sappi Lanaken",
+   "carrier": "CCGT",
+   "p_nom_MW": 43.0
+  },
+  {
+   "uid": "Monsanto Oud Lillo",
+   "carrier": "CCGT",
+   "p_nom_MW": 43.0
+  },
+  {
+   "uid": "Lillo Degussa",
+   "carrier": "CCGT",
+   "p_nom_MW": 85.0
+  },
+  {
+   "uid": "Jemeppe Sur Sambre",
+   "carrier": "CCGT",
+   "p_nom_MW": 106.0
+  },
+  {
+   "uid": "Doel 3",
+   "carrier": "nuclear",
+   "p_nom_MW": 1056.0
+  },
+  {
+   "uid": "Zelzate Tj",
+   "carrier": "oil",
+   "p_nom_MW": 18.6
+  },
+  {
+   "uid": "Zeebrugge Tj",
+   "carrier": "oil",
+   "p_nom_MW": 18.6
+  },
+  {
+   "uid": "Zedelgem Tj",
+   "carrier": "oil",
+   "p_nom_MW": 18.6
+  },
+  {
+   "uid": "Noordschote Tj",
+   "carrier": "oil",
+   "p_nom_MW": 18.6
+  },
+  {
+   "uid": "Deux Acren Tj",
+   "carrier": "oil",
+   "p_nom_MW": 18.6
+  },
+  {
+   "uid": "Cierreux Tj",
+   "carrier": "oil",
+   "p_nom_MW": 18.6
+  },
+  {
+   "uid": "Aalter Tj",
+   "carrier": "oil",
+   "p_nom_MW": 18.6
+  },
+  {
+   "uid": "Awirs",
+   "carrier": "solid biomass",
+   "p_nom_MW": 80.0
+  },
+  {
+   "uid": "Biowanze",
+   "carrier": "solid biomass",
+   "p_nom_MW": 26.0
+  },
+  {
+   "uid": "Burgo Ardennes",
+   "carrier": "solid biomass",
+   "p_nom_MW": 42.0
+  },
+  {
+   "uid": "Energie",
+   "carrier": "solid biomass",
+   "p_nom_MW": 45.0
+  }
+ ],
+ "variants": [
+  {
+   "name": "v00_baseline",
+   "path": "BE_2019_w44/v00_baseline.json.gz",
+   "removed_units": [],
+   "removed_MW": 0,
+   "thermal_units": 35,
+   "thermal_MW": 10310.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v01_Awirs_Scheldelaan-Exxonm",
+   "path": "BE_2019_w44/v01_Awirs_Scheldelaan-Exxonm.json.gz",
+   "removed_units": [
+    "Awirs",
+    "Scheldelaan Exxonmobil"
+   ],
+   "removed_MW": 220.0,
+   "thermal_units": 33,
+   "thermal_MW": 10090.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v02_Zedelgem-Tj_Zeebrugge-Tj",
+   "path": "BE_2019_w44/v02_Zedelgem-Tj_Zeebrugge-Tj.json.gz",
+   "removed_units": [
+    "Zedelgem Tj",
+    "Zeebrugge Tj"
+   ],
+   "removed_MW": 37.2,
+   "thermal_units": 33,
+   "thermal_MW": 10273.2,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v03_Marcinelle-Energie_Zandvliet",
+   "path": "BE_2019_w44/v03_Marcinelle-Energie_Zandvliet.json.gz",
+   "removed_units": [
+    "Marcinelle Energie Carsid",
+    "Zandvliet"
+   ],
+   "removed_MW": 799.2,
+   "thermal_units": 33,
+   "thermal_MW": 9511.2,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v04_Drogenbos_Zeebrugge-Tj",
+   "path": "BE_2019_w44/v04_Drogenbos_Zeebrugge-Tj.json.gz",
+   "removed_units": [
+    "Drogenbos",
+    "Zeebrugge Tj"
+   ],
+   "removed_MW": 478.6,
+   "thermal_units": 33,
+   "thermal_MW": 9831.8,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v05_Lillo-Degussa",
+   "path": "BE_2019_w44/v05_Lillo-Degussa.json.gz",
+   "removed_units": [
+    "Lillo Degussa"
+   ],
+   "removed_MW": 85.0,
+   "thermal_units": 34,
+   "thermal_MW": 10225.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v06_Burgo-Ardennes",
+   "path": "BE_2019_w44/v06_Burgo-Ardennes.json.gz",
+   "removed_units": [
+    "Burgo Ardennes"
+   ],
+   "removed_MW": 42.0,
+   "thermal_units": 34,
+   "thermal_MW": 10268.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v07_Doel-1_Zwijndrecht-Lanxes",
+   "path": "BE_2019_w44/v07_Doel-1_Zwijndrecht-Lanxes.json.gz",
+   "removed_units": [
+    "Doel 1",
+    "Zwijndrecht Lanxess"
+   ],
+   "removed_MW": 512.0,
+   "thermal_units": 33,
+   "thermal_MW": 9798.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v08_Beringen_Burgo-Ardennes",
+   "path": "BE_2019_w44/v08_Beringen_Burgo-Ardennes.json.gz",
+   "removed_units": [
+    "Beringen",
+    "Burgo Ardennes"
+   ],
+   "removed_MW": 464.0,
+   "thermal_units": 33,
+   "thermal_MW": 9846.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v09_Burgo-Ardennes_Zandvliet",
+   "path": "BE_2019_w44/v09_Burgo-Ardennes_Zandvliet.json.gz",
+   "removed_units": [
+    "Burgo Ardennes",
+    "Zandvliet"
+   ],
+   "removed_MW": 428.2,
+   "thermal_units": 33,
+   "thermal_MW": 9882.2,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v10_Monsanto-Oud-Lillo_Tihange-1",
+   "path": "BE_2019_w44/v10_Monsanto-Oud-Lillo_Tihange-1.json.gz",
+   "removed_units": [
+    "Monsanto Oud Lillo",
+    "Tihange 1"
+   ],
+   "removed_MW": 1052.0,
+   "thermal_units": 33,
+   "thermal_MW": 9258.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v11_Zandvliet",
+   "path": "BE_2019_w44/v11_Zandvliet.json.gz",
+   "removed_units": [
+    "Zandvliet"
+   ],
+   "removed_MW": 386.2,
+   "thermal_units": 34,
+   "thermal_MW": 9924.2,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v12_Inesco_Zelzate-Tj",
+   "path": "BE_2019_w44/v12_Inesco_Zelzate-Tj.json.gz",
+   "removed_units": [
+    "Inesco",
+    "Zelzate Tj"
+   ],
+   "removed_MW": 156.6,
+   "thermal_units": 33,
+   "thermal_MW": 10153.8,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v13_Aalst-Syral",
+   "path": "BE_2019_w44/v13_Aalst-Syral.json.gz",
+   "removed_units": [
+    "Aalst Syral"
+   ],
+   "removed_MW": 48.0,
+   "thermal_units": 34,
+   "thermal_MW": 10262.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v14_Sappi-Lanaken",
+   "path": "BE_2019_w44/v14_Sappi-Lanaken.json.gz",
+   "removed_units": [
+    "Sappi Lanaken"
+   ],
+   "removed_MW": 43.0,
+   "thermal_units": 34,
+   "thermal_MW": 10267.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v15_Zedelgem-Tj",
+   "path": "BE_2019_w44/v15_Zedelgem-Tj.json.gz",
+   "removed_units": [
+    "Zedelgem Tj"
+   ],
+   "removed_MW": 18.6,
+   "thermal_units": 34,
+   "thermal_MW": 10291.8,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v16_Herdersbrug_Monsanto-Oud-Lillo",
+   "path": "BE_2019_w44/v16_Herdersbrug_Monsanto-Oud-Lillo.json.gz",
+   "removed_units": [
+    "Herdersbrug",
+    "Monsanto Oud Lillo"
+   ],
+   "removed_MW": 508.0,
+   "thermal_units": 33,
+   "thermal_MW": 9802.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v17_Doel-4",
+   "path": "BE_2019_w44/v17_Doel-4.json.gz",
+   "removed_units": [
+    "Doel 4"
+   ],
+   "removed_MW": 1090.0,
+   "thermal_units": 34,
+   "thermal_MW": 9220.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v18_Herdersbrug",
+   "path": "BE_2019_w44/v18_Herdersbrug.json.gz",
+   "removed_units": [
+    "Herdersbrug"
+   ],
+   "removed_MW": 465.0,
+   "thermal_units": 34,
+   "thermal_MW": 9845.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v19_Zwijndrecht-Lanxes",
+   "path": "BE_2019_w44/v19_Zwijndrecht-Lanxes.json.gz",
+   "removed_units": [
+    "Zwijndrecht Lanxess"
+   ],
+   "removed_MW": 58.0,
+   "thermal_units": 34,
+   "thermal_MW": 10252.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v20_Biowanze_Monsanto-Oud-Lillo",
+   "path": "BE_2019_w44/v20_Biowanze_Monsanto-Oud-Lillo.json.gz",
+   "removed_units": [
+    "Biowanze",
+    "Monsanto Oud Lillo"
+   ],
+   "removed_MW": 69.0,
+   "thermal_units": 33,
+   "thermal_MW": 10241.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v21_Burgo-Ardennes_Marcinelle-Energie",
+   "path": "BE_2019_w44/v21_Burgo-Ardennes_Marcinelle-Energie.json.gz",
+   "removed_units": [
+    "Burgo Ardennes",
+    "Marcinelle Energie Carsid"
+   ],
+   "removed_MW": 455.0,
+   "thermal_units": 33,
+   "thermal_MW": 9855.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v22_Cierreux-Tj_Noordschote-Tj",
+   "path": "BE_2019_w44/v22_Cierreux-Tj_Noordschote-Tj.json.gz",
+   "removed_units": [
+    "Cierreux Tj",
+    "Noordschote Tj"
+   ],
+   "removed_MW": 37.2,
+   "thermal_units": 33,
+   "thermal_MW": 10273.2,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v23_Biowanze_Saint-Ghislain",
+   "path": "BE_2019_w44/v23_Biowanze_Saint-Ghislain.json.gz",
+   "removed_units": [
+    "Biowanze",
+    "Saint Ghislain"
+   ],
+   "removed_MW": 376.0,
+   "thermal_units": 33,
+   "thermal_MW": 9934.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v24_Herdersbrug_Lillo-Degussa",
+   "path": "BE_2019_w44/v24_Herdersbrug_Lillo-Degussa.json.gz",
+   "removed_units": [
+    "Herdersbrug",
+    "Lillo Degussa"
+   ],
+   "removed_MW": 550.0,
+   "thermal_units": 33,
+   "thermal_MW": 9760.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v25_Awirs",
+   "path": "BE_2019_w44/v25_Awirs.json.gz",
+   "removed_units": [
+    "Awirs"
+   ],
+   "removed_MW": 80.0,
+   "thermal_units": 34,
+   "thermal_MW": 10230.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v26_Beringen_Zandvliet",
+   "path": "BE_2019_w44/v26_Beringen_Zandvliet.json.gz",
+   "removed_units": [
+    "Beringen",
+    "Zandvliet"
+   ],
+   "removed_MW": 808.2,
+   "thermal_units": 33,
+   "thermal_MW": 9502.2,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v27_Deux-Acren-Tj",
+   "path": "BE_2019_w44/v27_Deux-Acren-Tj.json.gz",
+   "removed_units": [
+    "Deux Acren Tj"
+   ],
+   "removed_MW": 18.6,
+   "thermal_units": 34,
+   "thermal_MW": 10291.8,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v28_Jemeppe-Sur-Sambre_Zelzate-Tj",
+   "path": "BE_2019_w44/v28_Jemeppe-Sur-Sambre_Zelzate-Tj.json.gz",
+   "removed_units": [
+    "Jemeppe Sur Sambre",
+    "Zelzate Tj"
+   ],
+   "removed_MW": 124.6,
+   "thermal_units": 33,
+   "thermal_MW": 10185.8,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v29_Drogenbos",
+   "path": "BE_2019_w44/v29_Drogenbos.json.gz",
+   "removed_units": [
+    "Drogenbos"
+   ],
+   "removed_MW": 460.0,
+   "thermal_units": 34,
+   "thermal_MW": 9850.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v30_Jemeppe-Sur-Sambre_Tihange-2",
+   "path": "BE_2019_w44/v30_Jemeppe-Sur-Sambre_Tihange-2.json.gz",
+   "removed_units": [
+    "Jemeppe Sur Sambre",
+    "Tihange 2"
+   ],
+   "removed_MW": 1161.0,
+   "thermal_units": 33,
+   "thermal_MW": 9149.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v31_Biowanze_Ringvaart",
+   "path": "BE_2019_w44/v31_Biowanze_Ringvaart.json.gz",
+   "removed_units": [
+    "Biowanze",
+    "Ringvaart"
+   ],
+   "removed_MW": 411.0,
+   "thermal_units": 33,
+   "thermal_MW": 9899.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v32_Cierreux-Tj_Zedelgem-Tj",
+   "path": "BE_2019_w44/v32_Cierreux-Tj_Zedelgem-Tj.json.gz",
+   "removed_units": [
+    "Cierreux Tj",
+    "Zedelgem Tj"
+   ],
+   "removed_MW": 37.2,
+   "thermal_units": 33,
+   "thermal_MW": 10273.2,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v33_Doel-4_Herdersbrug",
+   "path": "BE_2019_w44/v33_Doel-4_Herdersbrug.json.gz",
+   "removed_units": [
+    "Doel 4",
+    "Herdersbrug"
+   ],
+   "removed_MW": 1555.0,
+   "thermal_units": 33,
+   "thermal_MW": 8755.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v34_Jemeppe-Sur-Sambre",
+   "path": "BE_2019_w44/v34_Jemeppe-Sur-Sambre.json.gz",
+   "removed_units": [
+    "Jemeppe Sur Sambre"
+   ],
+   "removed_MW": 106.0,
+   "thermal_units": 34,
+   "thermal_MW": 10204.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v35_Energie",
+   "path": "BE_2019_w44/v35_Energie.json.gz",
+   "removed_units": [
+    "Energie"
+   ],
+   "removed_MW": 45.0,
+   "thermal_units": 34,
+   "thermal_MW": 10265.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v36_Doel-2_Noordschote-Tj",
+   "path": "BE_2019_w44/v36_Doel-2_Noordschote-Tj.json.gz",
+   "removed_units": [
+    "Doel 2",
+    "Noordschote Tj"
+   ],
+   "removed_MW": 472.6,
+   "thermal_units": 33,
+   "thermal_MW": 9837.8,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v37_Beerse_Burgo-Ardennes",
+   "path": "BE_2019_w44/v37_Beerse_Burgo-Ardennes.json.gz",
+   "removed_units": [
+    "Beerse",
+    "Burgo Ardennes"
+   ],
+   "removed_MW": 75.0,
+   "thermal_units": 33,
+   "thermal_MW": 10235.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v38_Aalter-Tj",
+   "path": "BE_2019_w44/v38_Aalter-Tj.json.gz",
+   "removed_units": [
+    "Aalter Tj"
+   ],
+   "removed_MW": 18.6,
+   "thermal_units": 34,
+   "thermal_MW": 10291.8,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v39_Rodenhuize",
+   "path": "BE_2019_w44/v39_Rodenhuize.json.gz",
+   "removed_units": [
+    "Rodenhuize"
+   ],
+   "removed_MW": 205.0,
+   "thermal_units": 34,
+   "thermal_MW": 10105.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v40_Cierreux-Tj",
+   "path": "BE_2019_w44/v40_Cierreux-Tj.json.gz",
+   "removed_units": [
+    "Cierreux Tj"
+   ],
+   "removed_MW": 18.6,
+   "thermal_units": 34,
+   "thermal_MW": 10291.8,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v41_Beerse_Drogenbos",
+   "path": "BE_2019_w44/v41_Beerse_Drogenbos.json.gz",
+   "removed_units": [
+    "Beerse",
+    "Drogenbos"
+   ],
+   "removed_MW": 493.0,
+   "thermal_units": 33,
+   "thermal_MW": 9817.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v42_Burgo-Ardennes_Inesco",
+   "path": "BE_2019_w44/v42_Burgo-Ardennes_Inesco.json.gz",
+   "removed_units": [
+    "Burgo Ardennes",
+    "Inesco"
+   ],
+   "removed_MW": 180.0,
+   "thermal_units": 33,
+   "thermal_MW": 10130.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v43_Marcinelle-Energie",
+   "path": "BE_2019_w44/v43_Marcinelle-Energie.json.gz",
+   "removed_units": [
+    "Marcinelle Energie Carsid"
+   ],
+   "removed_MW": 413.0,
+   "thermal_units": 34,
+   "thermal_MW": 9897.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v44_Doel-3_Tihange-1",
+   "path": "BE_2019_w44/v44_Doel-3_Tihange-1.json.gz",
+   "removed_units": [
+    "Doel 3",
+    "Tihange 1"
+   ],
+   "removed_MW": 2065.0,
+   "thermal_units": 33,
+   "thermal_MW": 8245.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v45_Zeebrugge-Tj",
+   "path": "BE_2019_w44/v45_Zeebrugge-Tj.json.gz",
+   "removed_units": [
+    "Zeebrugge Tj"
+   ],
+   "removed_MW": 18.6,
+   "thermal_units": 34,
+   "thermal_MW": 10291.8,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v46_Awirs_Burgo-Ardennes",
+   "path": "BE_2019_w44/v46_Awirs_Burgo-Ardennes.json.gz",
+   "removed_units": [
+    "Awirs",
+    "Burgo Ardennes"
+   ],
+   "removed_MW": 122.0,
+   "thermal_units": 33,
+   "thermal_MW": 10188.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v47_Doel-4_Inesco",
+   "path": "BE_2019_w44/v47_Doel-4_Inesco.json.gz",
+   "removed_units": [
+    "Doel 4",
+    "Inesco"
+   ],
+   "removed_MW": 1228.0,
+   "thermal_units": 33,
+   "thermal_MW": 9082.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v48_Doel-2_Zandvliet",
+   "path": "BE_2019_w44/v48_Doel-2_Zandvliet.json.gz",
+   "removed_units": [
+    "Doel 2",
+    "Zandvliet"
+   ],
+   "removed_MW": 840.2,
+   "thermal_units": 33,
+   "thermal_MW": 9470.2,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v49_Beerse",
+   "path": "BE_2019_w44/v49_Beerse.json.gz",
+   "removed_units": [
+    "Beerse"
+   ],
+   "removed_MW": 33.0,
+   "thermal_units": 34,
+   "thermal_MW": 10277.4,
+   "peak_MW": 13174.3
+  },
+  {
+   "name": "v50_Doel-2",
+   "path": "BE_2019_w44/v50_Doel-2.json.gz",
+   "removed_units": [
+    "Doel 2"
+   ],
+   "removed_MW": 454.0,
+   "thermal_units": 34,
+   "thermal_MW": 9856.4,
+   "peak_MW": 13174.3
+  }
+ ],
+ "failures": []
+}

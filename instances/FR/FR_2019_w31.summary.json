@@ -1,0 +1,149 @@
+{
+ "capacity": {
+  "storage_MWh": 83932.0,
+  "thermal_to_peak_load_ratio": 1.295,
+  "thermal_by_carrier_MW": {
+   "oil": 2101.0,
+   "solid biomass": 420.2,
+   "CCGT": 6789.0,
+   "coal": 3715.0,
+   "nuclear": 65880.0,
+   "lignite": 977.0
+  },
+  "thermal_units_by_carrier": {
+   "oil": 16,
+   "solid biomass": 9,
+   "CCGT": 15,
+   "coal": 4,
+   "nuclear": 58,
+   "lignite": 1
+  },
+  "profiled_by_carrier_MW": {
+   "hydro reservoir": 1796.0,
+   "ror": 7118.1,
+   "solar": 6457.0,
+   "waste": 204.0,
+   "import": 2465.0,
+   "onwind": 7825.0
+  },
+  "storage_MW": 5565.0,
+  "thermal_MW": 79882.2
+ },
+ "instance": {
+  "countries": [
+   "FR"
+  ],
+  "format_version": "0.4",
+  "time_steps": 168,
+  "start": "2019-07-29 00:00:00",
+  "year": 2019,
+  "time_step_min": 60,
+  "week": 31,
+  "end": "2019-08-04 23:00:00"
+ },
+ "files": {
+  "summary": "FR_2019_w31.summary.json",
+  "instance": "FR_2019_w31.json.gz"
+ },
+ "demand": {
+  "energy_MWh": 8774769.0,
+  "min_MW": 42503.0,
+  "peak_MW": 61675.0,
+  "mean_MW": 52230.8
+ },
+ "imports": {
+  "export_energy_MWh": 1561162.0,
+  "max_import_MW": 2465.0,
+  "borders": [
+   "FR<-BE",
+   "FR<-CH"
+  ],
+  "net_MWh": -1520581.0,
+  "import_energy_MWh": 40581.0,
+  "enabled": true
+ },
+ "grid": {
+  "total_line_capacity_MW": 1552144.1,
+  "voltages_kV": [
+   220,
+   225,
+   380,
+   400
+  ],
+  "transformers": 137
+ },
+ "size": {
+  "branches": 1998,
+  "profiled_units": 520,
+  "thermal_units": 103,
+  "buses": 1201,
+  "storage_units": 7,
+  "binary_variables_approx": 51912
+ },
+ "options": {
+  "flow_penalty_eur_per_MW": 5000.0,
+  "costs_year": 2020,
+  "min_capacity_MW": 10.0,
+  "imports": "historical",
+  "import_cost_eur_per_MWh": 0.0,
+  "co2_price_eur_per_t": 0.0,
+  "voll_eur_per_MW": 10000.0,
+  "initial_conditions": "generated"
+ },
+ "provenance_notes": {
+  "measured generation": [
+   "carriers with no fleet or cost data, bounded by Energy-Charts measured hourly generation: hydro reservoir 1029 MW mean, waste 184 MW mean"
+  ],
+  "fleet": [
+   "dropped 534 units below 10 MW (2176 MW, 1.7% of fleet capacity)",
+   "103 committable thermal units, 79882 MW, carriers ['CCGT', 'coal', 'lignite', 'nuclear', 'oil', 'solid biomass']",
+   "carriers not modelled: Steam Turbine (27 units, 2165 MW), battery (7 units, 261 MW), biogas (1 units, 31 MW), waste (6 units, 208 MW)"
+  ],
+  "topology": [
+   "137 transformers carry no impedance in osm-prebuilt; given x=0.1 p.u. so DC-OPF has a finite susceptance on every branch",
+   "osm-prebuilt 0.7: 1201 AC buses, 1861 lines, 137 transformers, [220, 225, 380, 400] kV"
+  ],
+  "demand": [
+   "FR: 94 NUTS3 regions weighted 60% GDP / 40% population (Eurostat 2019) spread over the 1002 substations inside them in proportion to their connection capacity; dropped 7 region(s) over 150 km from the grid (FRY30, FRY40, FRY50, FRM01, FRM02, FRY10, FRY20)",
+   "OPSD 2020-10-06 entsoe transparency, peak 51326 MW / mean 42938 MW"
+  ],
+  "imports": [
+   "historical cross-border physical flows from Energy-Charts (ENTSO-E) across 6 borders, net -9051 MW mean; imports are curtailable, exports are fixed load"
+  ],
+  "unit commitment": [
+   "no PyPSA-Eur UC parameters for ['oil', 'solid biomass']; these get PyPSA defaults (no min up/down time, p_min_pu=0, free ramping)"
+  ],
+  "vre": [
+   "OPSD measured generation as the hourly upper bound for FR/solar, FR/onwind"
+  ],
+  "storage": [
+   "7 PHS units with max_hours from powerplantmatching reservoir capacity, round-trip efficiency 0.75",
+   "skipped 3 PHS units with no reservoir capacity in the data (Rance Tidal Rance Tidal, Alrance, Chatelard Vallorcine)"
+  ],
+  "hydro": [
+   "64 run-of-river units (7118 MW) bounded by installed capacity; no measured inflow series available",
+   "excluded 88 reservoir units (8598 MW): no free hourly inflow dataset, and UnitCommitment.jl storage has no inflow field"
+  ]
+ },
+ "feasibility": {
+  "profiled_curtailable": true,
+  "flow_limit_penalty_eur_per_MW": 5000.0,
+  "power_balance_penalty_eur_per_MW": 10000.0,
+  "warnings": []
+ },
+ "sources": {
+  "fleet": "powerplantmatching (published matched dataset)",
+  "demand": "Open Power System Data time_series 2020-10-06",
+  "unit_commitment_params": "PyPSA-Eur data/unit_commitment.csv",
+  "vre": "Open Power System Data time_series 2020-10-06",
+  "grid": "PyPSA-Eur osm-prebuilt 0.7",
+  "costs": "PyPSA technology-data costs_2020.csv",
+  "cross_border_flows": "Energy-Charts (ENTSO-E physical flows)"
+ },
+ "initial_conditions": {
+  "note": "no observational dataset of pre-horizon commitment exists; this state is derived from the instance itself",
+  "method": "single-period MIP against the first hour's demand",
+  "source": "UnitCommitment.jl generate_initial_conditions!",
+  "units_set": 103
+ }
+}

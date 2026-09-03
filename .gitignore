@@ -1,10 +1,9 @@
-# Generated instances: ~180 MB and fully reproducible from the code
-# (`python generate_batch.py` etc. — see README §4).
-instances/
-instances_*/
-
-# Downloaded source datasets: ~220 MB, fetched on demand and cached
+# Downloaded source datasets: ~220 MB, fetched on demand and cached locally.
 data/cache/
+
+# Solver output, written next to the instances by julia/solve_all.jl.
+instances*/results*.json
+instances*/congestion.json
 
 # Julia environment resolution
 julia/Manifest.toml

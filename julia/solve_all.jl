@@ -169,13 +169,17 @@ function solve_one(path::String)
     return result
 end
 
+"""Instance files, as written by the generators; they may be gzipped."""
+function is_instance_file(f::AbstractString)
+    (endswith(f, ".json") || endswith(f, ".json.gz")) || return false
+    endswith(f, ".summary.json") && return false
+    startswith(f, "results") && return false
+    return f ∉ ("index.json", "congestion.json")
+end
+
 files = String[]
 for (root, _, names) in walkdir(dir), f in names
-    # Skip everything this tool writes: sharded runs put results.shardN.json
-    # next to the instances, and a shard would otherwise try to solve another
-    # shard's output.
-    if endswith(f, ".json") && !endswith(f, ".summary.json") &&
-       !startswith(f, "results") && f ∉ ("index.json", "congestion.json")
+    if is_instance_file(f)
         push!(files, joinpath(root, f))
     end
 end

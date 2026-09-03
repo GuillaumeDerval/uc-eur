@@ -7,7 +7,12 @@
 #
 #   julia --project=julia julia/congestion.jl <dir> [gap] [limit]
 
-using UnitCommitment, JuMP, HiGHS, JSON, Printf
+using UnitCommitment, JuMP, HiGHS, JSON, Printf, GZip
+
+read_instance_json(path) =
+    endswith(path, ".gz") ?
+        GZip.open(path, "r") do io; JSON.parse(io; dicttype = Dict, inttype = Int64); end :
+        JSON.parsefile(path; dicttype = Dict, inttype = Int64)
 const HAS_GUROBI = try; @eval using Gurobi; true; catch; false; end
 
 const dir = length(ARGS) >= 1 ? ARGS[1] : "instances"
@@ -37,9 +42,15 @@ function solve_file(path)
     return (objective_value(m), shed)
 end
 
+function is_instance_file(f::AbstractString)
+    (endswith(f, ".json") || endswith(f, ".json.gz")) || return false
+    endswith(f, ".summary.json") && return false
+    startswith(f, "results") && return false
+    return f ∉ ("index.json", "congestion.json")
+end
+
 files = sort([joinpath(r, f) for (r, _, ns) in walkdir(dir) for f in ns
-              if endswith(f, ".json") && !endswith(f, ".summary.json") &&
-                 f ∉ ("index.json", "results.json")])
+              if is_instance_file(f)])
 
 @printf("%-28s %14s %14s %12s %10s\n",
         "instance", "objective", "uncongested", "congestion", "shed MWh")
@@ -47,7 +58,7 @@ results = Any[]
 for f in files
     obj, shed = solve_file(f)
     # Same instance with the network effectively removed as a constraint.
-    raw = JSON.parsefile(f; dicttype = Dict, inttype = Int64)
+    raw = read_instance_json(f)
     for l in values(raw["Transmission lines"])
         l["Normal flow limit (MW)"] *= RELAX
         l["Emergency flow limit (MW)"] *= RELAX

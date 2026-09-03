@@ -1,0 +1,131 @@
+{
+ "capacity": {
+  "storage_MWh": 0.0,
+  "thermal_to_peak_load_ratio": 0.628,
+  "thermal_by_carrier_MW": {
+   "solid biomass": 23.0,
+   "CCGT": 1087.0
+  },
+  "thermal_units_by_carrier": {
+   "solid biomass": 1,
+   "CCGT": 3
+  },
+  "profiled_by_carrier_MW": {
+   "other": 54.0,
+   "ror": 1536.0,
+   "import": 1107.0,
+   "onwind": 30.0
+  },
+  "storage_MW": 0.0,
+  "thermal_MW": 1110.0
+ },
+ "instance": {
+  "countries": [
+   "LV"
+  ],
+  "format_version": "0.4",
+  "time_steps": 168,
+  "start": "2019-08-26 00:00:00",
+  "year": 2019,
+  "time_step_min": 60,
+  "week": 35,
+  "end": "2019-09-01 23:00:00"
+ },
+ "files": {
+  "summary": "LV_2019_w35.summary.json",
+  "instance": "LV_2019_w35.json.gz"
+ },
+ "demand": {
+  "energy_MWh": 196478.0,
+  "min_MW": 539.0,
+  "peak_MW": 1768.0,
+  "mean_MW": 1169.5
+ },
+ "imports": {
+  "export_energy_MWh": 64963.0,
+  "max_import_MW": 1107.0,
+  "borders": [
+   "LV<-EE",
+   "LV<-LT",
+   "LV<-RU"
+  ],
+  "net_MWh": -17693.0,
+  "import_energy_MWh": 47270.0,
+  "enabled": true
+ },
+ "grid": {
+  "total_line_capacity_MW": 34286.0,
+  "voltages_kV": [
+   330
+  ],
+  "transformers": 0
+ },
+ "size": {
+  "branches": 29,
+  "profiled_units": 29,
+  "thermal_units": 4,
+  "buses": 24,
+  "storage_units": 0,
+  "binary_variables_approx": 2016
+ },
+ "options": {
+  "flow_penalty_eur_per_MW": 5000.0,
+  "costs_year": 2020,
+  "min_capacity_MW": 10.0,
+  "imports": "historical",
+  "import_cost_eur_per_MWh": 0.0,
+  "co2_price_eur_per_t": 0.0,
+  "voll_eur_per_MW": 10000.0,
+  "initial_conditions": "generated"
+ },
+ "provenance_notes": {
+  "measured generation": [
+   "carriers with no fleet or cost data, bounded by Energy-Charts measured hourly generation: other 52 MW mean"
+  ],
+  "fleet": [
+   "dropped 2 units below 10 MW (7 MW, 0.2% of fleet capacity)",
+   "4 committable thermal units, 1110 MW, carriers ['CCGT', 'solid biomass']",
+   "carriers not modelled: battery (1 units, 10 MW)"
+  ],
+  "topology": [
+   "osm-prebuilt 0.7: 24 AC buses, 29 lines, 0 transformers, [330] kV"
+  ],
+  "demand": [
+   "LV: 2 NUTS3 regions weighted 60% GDP / 40% population (Eurostat 2019) spread over the 6 substations inside them in proportion to their connection capacity",
+   "OPSD 2020-10-06 entsoe transparency, peak 1006 MW / mean 783 MW"
+  ],
+  "imports": [
+   "historical cross-border physical flows from Energy-Charts (ENTSO-E) across 3 borders, net -105 MW mean; imports are curtailable, exports are fixed load"
+  ],
+  "unit commitment": [
+   "no PyPSA-Eur UC parameters for ['solid biomass']; these get PyPSA defaults (no min up/down time, p_min_pu=0, free ramping)"
+  ],
+  "vre": [
+   "OPSD measured generation as the hourly upper bound for LV/onwind"
+  ],
+  "hydro": [
+   "3 run-of-river units (1536 MW) bounded by installed capacity; no measured inflow series available"
+  ]
+ },
+ "feasibility": {
+  "profiled_curtailable": true,
+  "flow_limit_penalty_eur_per_MW": 5000.0,
+  "power_balance_penalty_eur_per_MW": 10000.0,
+  "warnings": []
+ },
+ "sources": {
+  "fleet": "powerplantmatching (published matched dataset)",
+  "demand": "Open Power System Data time_series 2020-10-06",
+  "unit_commitment_params": "PyPSA-Eur data/unit_commitment.csv",
+  "vre": "Open Power System Data time_series 2020-10-06",
+  "grid": "PyPSA-Eur osm-prebuilt 0.7",
+  "costs": "PyPSA technology-data costs_2020.csv",
+  "cross_border_flows": "Energy-Charts (ENTSO-E physical flows)"
+ },
+ "initial_conditions": {
+  "note": "no observational dataset of pre-horizon commitment exists; this state is derived from the instance itself",
+  "method": "single-period MIP against the first hour's demand",
+  "source": "UnitCommitment.jl generate_initial_conditions!",
+  "units_set": 4
+ }
+}

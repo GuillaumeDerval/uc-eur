@@ -16,7 +16,7 @@
 # "Initial power (MW)" back into the instance. Instances are then self-contained
 # for any solver, not only UnitCommitment.jl.
 
-using UnitCommitment, JuMP, HiGHS, JSON, Printf
+using UnitCommitment, JuMP, HiGHS, JSON, Printf, GZip
 
 const target = length(ARGS) >= 1 ? ARGS[1] : "instances"
 const optimizer = optimizer_with_attributes(HiGHS.Optimizer, "output_flag" => false)
@@ -25,8 +25,9 @@ function instance_files(target::String)
     isfile(target) && return [target]
     files = String[]
     for (root, _, names) in walkdir(target), f in names
-        if endswith(f, ".json") && !endswith(f, ".summary.json") &&
-           f ∉ ("index.json", "results.json")
+        if (endswith(f, ".json") || endswith(f, ".json.gz")) &&
+           !endswith(f, ".summary.json") && !startswith(f, "results") &&
+           f ∉ ("index.json", "congestion.json")
             push!(files, joinpath(root, f))
         end
     end
@@ -41,7 +42,11 @@ instance, so every field the generator wrote survives untouched.
 way out to keep the file in the units the format documents.
 """
 function add_initial_conditions!(path::String)
-    raw = JSON.parsefile(path; dicttype = Dict, inttype = Int64)
+    raw = endswith(path, ".gz") ?
+        GZip.open(path, "r") do io
+            JSON.parse(io; dicttype = Dict, inttype = Int64)
+        end :
+        JSON.parsefile(path; dicttype = Dict, inttype = Int64)
     generators = raw["Generators"]
 
     already = count(
@@ -94,8 +99,10 @@ function add_initial_conditions!(path::String)
     end
     clamped > 0 && @printf("          (clamped %d unit(s) to their shutdown limit)\n", clamped)
 
-    open(path, "w") do io
-        JSON.print(io, raw, 1)
+    if endswith(path, ".gz")
+        GZip.open(path, "w") do io; JSON.print(io, raw, 1); end
+    else
+        open(path, "w") do io; JSON.print(io, raw, 1); end
     end
     update_summary!(path, updated)
     return (thermal, updated, "generated")
@@ -107,7 +114,7 @@ Keep the sibling summary truthful: the Python generator records
 into the instance.
 """
 function update_summary!(path::String, updated::Int)
-    summary_path = replace(path, r"\.json$" => ".summary.json")
+    summary_path = replace(path, r"\.json(\.gz)?$" => ".summary.json")
     isfile(summary_path) || return
     meta = JSON.parsefile(summary_path; dicttype = Dict, inttype = Int64)
     haskey(meta, "options") && (meta["options"]["initial_conditions"] = "generated")
