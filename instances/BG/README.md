@@ -1,14 +1,14 @@
 # instances / BG
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `BG_2019_w14.json.gz` | BG | 2019-04-01 | 7 | 153 | 240 | 17 | 9,554 | 90 | 1 | 6,165 | 881,804 | -124,709 | ok |
-| `BG_2019_w23.json.gz` | BG | 2019-06-03 | 7 | 153 | 240 | 17 | 9,554 | 90 | 1 | 4,853 | 719,226 | -24,960 | ok |
-| `BG_2019_w31.json.gz` | BG | 2019-07-29 | 7 | 153 | 240 | 17 | 9,554 | 90 | 1 | 6,081 | 848,222 | -152,937 | ok |
-| `BG_2019_w33.json.gz` | BG | 2019-08-12 | 7 | 153 | 240 | 17 | 9,554 | 90 | 1 | 5,620 | 804,701 | -132,707 | ok |
-| `BG_2019_w38.json.gz` | BG | 2019-09-16 | 7 | 153 | 240 | 17 | 9,554 | 92 | 1 | 5,397 | 748,126 | -105,569 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `BG_2019_w14.json.gz` | BG | 2019-04-01 | 7 | 153 | 240 | 17 | 9,554 | 90 | 1 | 6,165 | 881,804 | -124,709 | ok | [plot](BG_2019_w14.png) |
+| `BG_2019_w23.json.gz` | BG | 2019-06-03 | 7 | 153 | 240 | 17 | 9,554 | 90 | 1 | 4,853 | 719,226 | -24,960 | ok | [plot](BG_2019_w23.png) |
+| `BG_2019_w31.json.gz` | BG | 2019-07-29 | 7 | 153 | 240 | 17 | 9,554 | 90 | 1 | 6,081 | 848,222 | -152,937 | ok | [plot](BG_2019_w31.png) |
+| `BG_2019_w33.json.gz` | BG | 2019-08-12 | 7 | 153 | 240 | 17 | 9,554 | 90 | 1 | 5,620 | 804,701 | -132,707 | ok | [plot](BG_2019_w33.png) |
+| `BG_2019_w38.json.gz` | BG | 2019-09-16 | 7 | 153 | 240 | 17 | 9,554 | 92 | 1 | 5,397 | 748,126 | -105,569 | ok | [plot](BG_2019_w38.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

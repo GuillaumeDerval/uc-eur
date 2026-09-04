@@ -1,14 +1,14 @@
 # instances / EE
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `EE_2019_w07.json.gz` | EE | 2019-02-11 | 7 | 18 | 22 | 5 | 538 | 84 | 0 | 1,980 | 249,618 | 43,038 | ok |
-| `EE_2019_w22.json.gz` | EE | 2019-05-27 | 7 | 18 | 22 | 5 | 538 | 84 | 0 | 1,527 | 208,521 | 64,297 | ok |
-| `EE_2019_w31.json.gz` | EE | 2019-07-29 | 7 | 18 | 22 | 5 | 538 | 81 | 0 | 1,687 | 214,340 | 63,079 | ok |
-| `EE_2019_w36.json.gz` | EE | 2019-09-02 | 7 | 18 | 22 | 5 | 538 | 84 | 0 | 1,737 | 197,406 | 20,223 | ok |
-| `EE_2019_w44.json.gz` | EE | 2019-10-28 | 7 | 18 | 22 | 5 | 538 | 84 | 0 | 1,755 | 219,105 | 76,146 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `EE_2019_w07.json.gz` | EE | 2019-02-11 | 7 | 18 | 22 | 5 | 538 | 84 | 0 | 1,980 | 249,618 | 43,038 | ok | [plot](EE_2019_w07.png) |
+| `EE_2019_w22.json.gz` | EE | 2019-05-27 | 7 | 18 | 22 | 5 | 538 | 84 | 0 | 1,527 | 208,521 | 64,297 | ok | [plot](EE_2019_w22.png) |
+| `EE_2019_w31.json.gz` | EE | 2019-07-29 | 7 | 18 | 22 | 5 | 538 | 81 | 0 | 1,687 | 214,340 | 63,079 | ok | [plot](EE_2019_w31.png) |
+| `EE_2019_w36.json.gz` | EE | 2019-09-02 | 7 | 18 | 22 | 5 | 538 | 84 | 0 | 1,737 | 197,406 | 20,223 | ok | [plot](EE_2019_w36.png) |
+| `EE_2019_w44.json.gz` | EE | 2019-10-28 | 7 | 18 | 22 | 5 | 538 | 84 | 0 | 1,755 | 219,105 | 76,146 | ok | [plot](EE_2019_w44.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

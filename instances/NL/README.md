@@ -1,14 +1,14 @@
 # instances / NL
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `NL_2019_w06.json.gz` | NL | 2019-02-04 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 21,281 | 2,921,924 | -177,788 | ok |
-| `NL_2019_w07.json.gz` | NL | 2019-02-11 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 20,679 | 2,765,965 | -135,076 | ok |
-| `NL_2019_w21.json.gz` | NL | 2019-05-20 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 17,029 | 2,349,210 | -115,687 | ok |
-| `NL_2019_w32.json.gz` | NL | 2019-08-05 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 16,498 | 2,280,476 | 86,294 | ok |
-| `NL_2019_w33.json.gz` | NL | 2019-08-12 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 16,676 | 2,294,052 | 160,474 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `NL_2019_w06.json.gz` | NL | 2019-02-04 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 21,281 | 2,921,924 | -177,788 | ok | [plot](NL_2019_w06.png) |
+| `NL_2019_w07.json.gz` | NL | 2019-02-11 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 20,679 | 2,765,965 | -135,076 | ok | [plot](NL_2019_w07.png) |
+| `NL_2019_w21.json.gz` | NL | 2019-05-20 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 17,029 | 2,349,210 | -115,687 | ok | [plot](NL_2019_w21.png) |
+| `NL_2019_w32.json.gz` | NL | 2019-08-05 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 16,498 | 2,280,476 | 86,294 | ok | [plot](NL_2019_w32.png) |
+| `NL_2019_w33.json.gz` | NL | 2019-08-12 | 7 | 60 | 108 | 44 | 20,569 | 106 | 0 | 16,676 | 2,294,052 | 160,474 | ok | [plot](NL_2019_w33.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

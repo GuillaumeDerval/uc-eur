@@ -63,10 +63,11 @@ def outcome(res: dict | None) -> str:
     return "ok"
 
 
-def instance_row(meta: dict, res: dict | None, outage: bool) -> str:
+def instance_row(meta: dict, res: dict | None, outage: bool, sub: Path) -> str:
     i, s, c, d = meta["instance"], meta["size"], meta["capacity"], meta["demand"]
     imp = meta.get("imports", {})
     name = meta["files"]["instance"]
+    stem = name.removesuffix(".gz").removesuffix(".json")
     cells = [f"`{name}`"]
     if outage:
         o = meta.get("outage", {})
@@ -81,15 +82,17 @@ def instance_row(meta: dict, res: dict | None, outage: bool) -> str:
         fmt(d["peak_MW"]), fmt(d["energy_MWh"]),
         fmt(imp.get("net_MWh")), outcome(res),
     ]
+    png = sub / f"{stem}.png"
+    cells.append(f"[plot]({stem}.png)" if png.exists() else "-")
     return "| " + " | ".join(cells) + " |"
 
 
 HEAD_STD = ("Instance | Country | Start (UTC) | Days | Buses | Branches | "
             "Thermal units | Thermal MW | Profiled | Storage | Peak MW | "
-            "Demand MWh | Net imports MWh | Solved")
+            "Demand MWh | Net imports MWh | Solved | Dispatch")
 HEAD_OUT = ("Instance | Units removed | MW removed | Buses | Branches | "
             "Thermal units | Thermal MW | Profiled | Storage | Peak MW | "
-            "Demand MWh | Net imports MWh | Solved")
+            "Demand MWh | Net imports MWh | Solved | Dispatch")
 
 
 def table(rows: list[str], header: str) -> str:
@@ -101,7 +104,7 @@ def table(rows: list[str], header: str) -> str:
 
 
 def write_subdir_readme(sub: Path, items, results, outage: bool, title: str) -> None:
-    rows = [instance_row(m, results.get(key_of(m["files"]["instance"])), outage)
+    rows = [instance_row(m, results.get(key_of(m["files"]["instance"])), outage, sub)
             for _, m in items]
     head = HEAD_OUT if outage else HEAD_STD
     notes = sorted({
@@ -110,7 +113,9 @@ def write_subdir_readme(sub: Path, items, results, outage: bool, title: str) -> 
     })
     body = [f"# {title}", "",
             f"{len(items)} instances. Columns come from each instance's "
-            "`.summary.json`; *Solved* is from the last `solve_all.jl` run.", "",
+            "`.summary.json`; *Solved* is from the last `solve_all.jl` run, and "
+            "*Dispatch* links a plot of demand net of non-committable generation "
+            "against the capacity committed at the optimum.", "",
             table(rows, head), ""]
     if notes:
         body += ["<details><summary>Provenance and exclusions for this "

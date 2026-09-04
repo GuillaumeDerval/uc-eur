@@ -1,14 +1,14 @@
 # instances / LV
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `LV_2019_w06.json.gz` | LV | 2019-02-04 | 7 | 24 | 29 | 4 | 1,110 | 29 | 0 | 1,810 | 200,088 | 22,448 | ok |
-| `LV_2019_w10.json.gz` | LV | 2019-03-04 | 7 | 24 | 29 | 4 | 1,110 | 29 | 0 | 1,783 | 197,088 | 10,016 | ok |
-| `LV_2019_w29.json.gz` | LV | 2019-07-15 | 7 | 24 | 29 | 4 | 1,110 | 25 | 0 | 1,698 | 200,139 | 41,968 | ok |
-| `LV_2019_w35.json.gz` | LV | 2019-08-26 | 7 | 24 | 29 | 4 | 1,110 | 29 | 0 | 1,768 | 196,478 | -17,693 | ok |
-| `LV_2019_w52.json.gz` | LV | 2019-12-23 | 7 | 24 | 29 | 4 | 1,110 | 29 | 0 | 1,567 | 177,339 | 9,862 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `LV_2019_w06.json.gz` | LV | 2019-02-04 | 7 | 24 | 29 | 4 | 1,110 | 29 | 0 | 1,810 | 200,088 | 22,448 | ok | [plot](LV_2019_w06.png) |
+| `LV_2019_w10.json.gz` | LV | 2019-03-04 | 7 | 24 | 29 | 4 | 1,110 | 29 | 0 | 1,783 | 197,088 | 10,016 | ok | [plot](LV_2019_w10.png) |
+| `LV_2019_w29.json.gz` | LV | 2019-07-15 | 7 | 24 | 29 | 4 | 1,110 | 25 | 0 | 1,698 | 200,139 | 41,968 | ok | [plot](LV_2019_w29.png) |
+| `LV_2019_w35.json.gz` | LV | 2019-08-26 | 7 | 24 | 29 | 4 | 1,110 | 29 | 0 | 1,768 | 196,478 | -17,693 | ok | [plot](LV_2019_w35.png) |
+| `LV_2019_w52.json.gz` | LV | 2019-12-23 | 7 | 24 | 29 | 4 | 1,110 | 29 | 0 | 1,567 | 177,339 | 9,862 | ok | [plot](LV_2019_w52.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

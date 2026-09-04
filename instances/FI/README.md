@@ -1,14 +1,14 @@
 # instances / FI
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `FI_2019_w21.json.gz` | FI | 2019-05-20 | 7 | 105 | 146 | 81 | 12,199 | 284 | 0 | 9,869 | 1,447,615 | 362,427 | ok |
-| `FI_2019_w23.json.gz` | FI | 2019-06-03 | 7 | 105 | 146 | 81 | 12,199 | 283 | 0 | 9,567 | 1,428,602 | 322,203 | ok |
-| `FI_2019_w28.json.gz` | FI | 2019-07-08 | 7 | 105 | 146 | 81 | 12,199 | 284 | 0 | 9,775 | 1,479,135 | 302,881 | ok |
-| `FI_2019_w40.json.gz` | FI | 2019-09-30 | 7 | 105 | 146 | 81 | 12,199 | 285 | 0 | 11,322 | 1,652,815 | 365,646 | ok |
-| `FI_2019_w41.json.gz` | FI | 2019-10-07 | 7 | 105 | 146 | 81 | 12,199 | 285 | 0 | 11,423 | 1,650,581 | 428,334 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `FI_2019_w21.json.gz` | FI | 2019-05-20 | 7 | 105 | 146 | 81 | 12,199 | 284 | 0 | 9,869 | 1,447,615 | 362,427 | ok | [plot](FI_2019_w21.png) |
+| `FI_2019_w23.json.gz` | FI | 2019-06-03 | 7 | 105 | 146 | 81 | 12,199 | 283 | 0 | 9,567 | 1,428,602 | 322,203 | ok | [plot](FI_2019_w23.png) |
+| `FI_2019_w28.json.gz` | FI | 2019-07-08 | 7 | 105 | 146 | 81 | 12,199 | 284 | 0 | 9,775 | 1,479,135 | 302,881 | ok | [plot](FI_2019_w28.png) |
+| `FI_2019_w40.json.gz` | FI | 2019-09-30 | 7 | 105 | 146 | 81 | 12,199 | 285 | 0 | 11,322 | 1,652,815 | 365,646 | ok | [plot](FI_2019_w40.png) |
+| `FI_2019_w41.json.gz` | FI | 2019-10-07 | 7 | 105 | 146 | 81 | 12,199 | 285 | 0 | 11,423 | 1,650,581 | 428,334 | ok | [plot](FI_2019_w41.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

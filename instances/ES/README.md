@@ -1,14 +1,14 @@
 # instances / ES
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `ES_2019_w03.json.gz` | ES | 2019-01-14 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 40,418 | 5,599,827 | 172,537 | ok |
-| `ES_2019_w12.json.gz` | ES | 2019-03-18 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 36,346 | 4,906,295 | 283,879 | ok |
-| `ES_2019_w17.json.gz` | ES | 2019-04-22 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 33,861 | 4,621,956 | 155,755 | ok |
-| `ES_2019_w40.json.gz` | ES | 2019-09-30 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 35,205 | 4,760,214 | 152,253 | ok |
-| `ES_2019_w43.json.gz` | ES | 2019-10-21 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 34,117 | 4,758,069 | 139,324 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `ES_2019_w03.json.gz` | ES | 2019-01-14 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 40,418 | 5,599,827 | 172,537 | ok | [plot](ES_2019_w03.png) |
+| `ES_2019_w12.json.gz` | ES | 2019-03-18 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 36,346 | 4,906,295 | 283,879 | ok | [plot](ES_2019_w12.png) |
+| `ES_2019_w17.json.gz` | ES | 2019-04-22 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 33,861 | 4,621,956 | 155,755 | ok | [plot](ES_2019_w17.png) |
+| `ES_2019_w40.json.gz` | ES | 2019-09-30 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 35,205 | 4,760,214 | 152,253 | ok | [plot](ES_2019_w40.png) |
+| `ES_2019_w43.json.gz` | ES | 2019-10-21 | 7 | 1,066 | 1,358 | 100 | 47,145 | 1,889 | 9 | 34,117 | 4,758,069 | 139,324 | ok | [plot](ES_2019_w43.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

@@ -1,14 +1,14 @@
 # instances / DE
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `DE_2019_w01.json.gz` | DE | 2018-12-31 | 7 | 780 | 1,172 | 346 | 93,635 | 2,850 | 26 | 80,869 | 10,830,970 | -1,562,073 | ok |
-| `DE_2019_w04.json.gz` | DE | 2019-01-21 | 7 | 780 | 1,172 | 341 | 89,561 | 2,863 | 26 | 85,138 | 12,107,553 | -1,194,821 | ok |
-| `DE_2019_w17.json.gz` | DE | 2019-04-22 | 7 | 780 | 1,172 | 341 | 89,561 | 2,865 | 26 | 78,878 | 9,710,986 | -274,626 | ok |
-| `DE_2019_w36.json.gz` | DE | 2019-09-02 | 7 | 780 | 1,172 | 341 | 89,561 | 2,350 | 26 | 75,047 | 9,588,125 | 21,034 | ok |
-| `DE_2019_w52.json.gz` | DE | 2019-12-23 | 7 | 780 | 1,172 | 341 | 89,561 | 2,352 | 26 | 67,727 | 8,816,969 | -270,669 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `DE_2019_w01.json.gz` | DE | 2018-12-31 | 7 | 780 | 1,172 | 346 | 93,635 | 2,850 | 26 | 80,869 | 10,830,970 | -1,562,073 | ok | [plot](DE_2019_w01.png) |
+| `DE_2019_w04.json.gz` | DE | 2019-01-21 | 7 | 780 | 1,172 | 341 | 89,561 | 2,863 | 26 | 85,138 | 12,107,553 | -1,194,821 | ok | [plot](DE_2019_w04.png) |
+| `DE_2019_w17.json.gz` | DE | 2019-04-22 | 7 | 780 | 1,172 | 341 | 89,561 | 2,865 | 26 | 78,878 | 9,710,986 | -274,626 | ok | [plot](DE_2019_w17.png) |
+| `DE_2019_w36.json.gz` | DE | 2019-09-02 | 7 | 780 | 1,172 | 341 | 89,561 | 2,350 | 26 | 75,047 | 9,588,125 | 21,034 | ok | [plot](DE_2019_w36.png) |
+| `DE_2019_w52.json.gz` | DE | 2019-12-23 | 7 | 780 | 1,172 | 341 | 89,561 | 2,352 | 26 | 67,727 | 8,816,969 | -270,669 | ok | [plot](DE_2019_w52.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

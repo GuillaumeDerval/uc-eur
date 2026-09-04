@@ -1,14 +1,14 @@
 # instances / PT
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `PT_2019_w14.json.gz` | PT | 2019-04-01 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 9,454 | 1,069,586 | -49,267 | ok |
-| `PT_2019_w22.json.gz` | PT | 2019-05-27 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 7,862 | 981,544 | 101,906 | ok |
-| `PT_2019_w35.json.gz` | PT | 2019-08-26 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 8,461 | 949,983 | 85,614 | ok |
-| `PT_2019_w36.json.gz` | PT | 2019-09-02 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 8,357 | 981,004 | 202,283 | ok |
-| `PT_2019_w52.json.gz` | PT | 2019-12-23 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 9,000 | 1,111,166 | -223,243 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `PT_2019_w14.json.gz` | PT | 2019-04-01 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 9,454 | 1,069,586 | -49,267 | ok | [plot](PT_2019_w14.png) |
+| `PT_2019_w22.json.gz` | PT | 2019-05-27 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 7,862 | 981,544 | 101,906 | ok | [plot](PT_2019_w22.png) |
+| `PT_2019_w35.json.gz` | PT | 2019-08-26 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 8,461 | 949,983 | 85,614 | ok | [plot](PT_2019_w35.png) |
+| `PT_2019_w36.json.gz` | PT | 2019-09-02 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 8,357 | 981,004 | 202,283 | ok | [plot](PT_2019_w36.png) |
+| `PT_2019_w52.json.gz` | PT | 2019-12-23 | 7 | 153 | 242 | 25 | 7,067 | 188 | 9 | 9,000 | 1,111,166 | -223,243 | ok | [plot](PT_2019_w52.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

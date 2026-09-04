@@ -1,14 +1,14 @@
 # instances / PL
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `PL_2019_w08.json.gz` | PL | 2019-02-18 | 7 | 246 | 382 | 59 | 32,604 | 226 | 6 | 24,946 | 3,569,115 | 186,299 | ok |
-| `PL_2019_w19.json.gz` | PL | 2019-05-06 | 7 | 246 | 382 | 59 | 32,604 | 226 | 6 | 23,251 | 3,282,146 | 183,581 | ok |
-| `PL_2019_w20.json.gz` | PL | 2019-05-13 | 7 | 246 | 382 | 59 | 32,604 | 226 | 6 | 24,230 | 3,313,659 | 201,380 | ok |
-| `PL_2019_w36.json.gz` | PL | 2019-09-02 | 7 | 246 | 382 | 59 | 32,604 | 227 | 6 | 23,189 | 3,193,026 | 275,829 | ok |
-| `PL_2019_w46.json.gz` | PL | 2019-11-11 | 7 | 246 | 382 | 59 | 32,604 | 227 | 6 | 24,719 | 3,355,884 | 239,898 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `PL_2019_w08.json.gz` | PL | 2019-02-18 | 7 | 246 | 382 | 59 | 32,604 | 226 | 6 | 24,946 | 3,569,115 | 186,299 | ok | [plot](PL_2019_w08.png) |
+| `PL_2019_w19.json.gz` | PL | 2019-05-06 | 7 | 246 | 382 | 59 | 32,604 | 226 | 6 | 23,251 | 3,282,146 | 183,581 | ok | [plot](PL_2019_w19.png) |
+| `PL_2019_w20.json.gz` | PL | 2019-05-13 | 7 | 246 | 382 | 59 | 32,604 | 226 | 6 | 24,230 | 3,313,659 | 201,380 | ok | [plot](PL_2019_w20.png) |
+| `PL_2019_w36.json.gz` | PL | 2019-09-02 | 7 | 246 | 382 | 59 | 32,604 | 227 | 6 | 23,189 | 3,193,026 | 275,829 | ok | [plot](PL_2019_w36.png) |
+| `PL_2019_w46.json.gz` | PL | 2019-11-11 | 7 | 246 | 382 | 59 | 32,604 | 227 | 6 | 24,719 | 3,355,884 | 239,898 | ok | [plot](PL_2019_w46.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

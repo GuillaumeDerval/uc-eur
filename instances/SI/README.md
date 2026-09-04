@@ -1,14 +1,14 @@
 # instances / SI
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `SI_2019_w12.json.gz` | SI | 2019-03-18 | 7 | 17 | 22 | 3 | 2,206 | 64 | 0 | 2,952 | 396,318 | 23,122 | ok |
-| `SI_2019_w13.json.gz` | SI | 2019-03-25 | 7 | 17 | 22 | 3 | 2,206 | 62 | 0 | 2,864 | 393,114 | 20,103 | ok |
-| `SI_2019_w16.json.gz` | SI | 2019-04-15 | 7 | 17 | 22 | 3 | 2,206 | 64 | 0 | 2,956 | 392,884 | -3,944 | ok |
-| `SI_2019_w19.json.gz` | SI | 2019-05-06 | 7 | 17 | 22 | 3 | 2,206 | 64 | 0 | 2,952 | 400,852 | -36,758 | ok |
-| `SI_2019_w37.json.gz` | SI | 2019-09-09 | 7 | 17 | 22 | 3 | 2,206 | 64 | 0 | 2,827 | 374,022 | 14,537 | 1.7 MWh shed |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `SI_2019_w12.json.gz` | SI | 2019-03-18 | 7 | 17 | 22 | 3 | 2,206 | 64 | 0 | 2,952 | 396,318 | 23,122 | ok | [plot](SI_2019_w12.png) |
+| `SI_2019_w13.json.gz` | SI | 2019-03-25 | 7 | 17 | 22 | 3 | 2,206 | 62 | 0 | 2,864 | 393,114 | 20,103 | ok | [plot](SI_2019_w13.png) |
+| `SI_2019_w16.json.gz` | SI | 2019-04-15 | 7 | 17 | 22 | 3 | 2,206 | 64 | 0 | 2,956 | 392,884 | -3,944 | ok | [plot](SI_2019_w16.png) |
+| `SI_2019_w19.json.gz` | SI | 2019-05-06 | 7 | 17 | 22 | 3 | 2,206 | 64 | 0 | 2,952 | 400,852 | -36,758 | ok | [plot](SI_2019_w19.png) |
+| `SI_2019_w37.json.gz` | SI | 2019-09-09 | 7 | 17 | 22 | 3 | 2,206 | 64 | 0 | 2,827 | 374,022 | 14,537 | 1.7 MWh shed | [plot](SI_2019_w37.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

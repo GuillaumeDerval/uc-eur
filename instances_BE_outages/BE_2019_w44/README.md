@@ -1,60 +1,60 @@
 # instances_BE_outages / BE_2019_w44
 
-51 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+51 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Units removed | MW removed | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `v00_baseline.json.gz` | _none (baseline)_ | 0 | 71 | 90 | 35 | 10,310 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v01_Awirs_Scheldelaan-Exxonm.json.gz` | Awirs, Scheldelaan Exxonmobil | 220 | 71 | 90 | 33 | 10,090 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v02_Zedelgem-Tj_Zeebrugge-Tj.json.gz` | Zedelgem Tj, Zeebrugge Tj | 37 | 71 | 90 | 33 | 10,273 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v03_Marcinelle-Energie_Zandvliet.json.gz` | Marcinelle Energie Carsid, Zandvliet | 799 | 71 | 90 | 33 | 9,511 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v04_Drogenbos_Zeebrugge-Tj.json.gz` | Drogenbos, Zeebrugge Tj | 479 | 71 | 90 | 33 | 9,832 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v05_Lillo-Degussa.json.gz` | Lillo Degussa | 85 | 71 | 90 | 34 | 10,225 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v06_Burgo-Ardennes.json.gz` | Burgo Ardennes | 42 | 71 | 90 | 34 | 10,268 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v07_Doel-1_Zwijndrecht-Lanxes.json.gz` | Doel 1, Zwijndrecht Lanxess | 512 | 71 | 90 | 33 | 9,798 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v08_Beringen_Burgo-Ardennes.json.gz` | Beringen, Burgo Ardennes | 464 | 71 | 90 | 33 | 9,846 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v09_Burgo-Ardennes_Zandvliet.json.gz` | Burgo Ardennes, Zandvliet | 428 | 71 | 90 | 33 | 9,882 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v10_Monsanto-Oud-Lillo_Tihange-1.json.gz` | Monsanto Oud Lillo, Tihange 1 | 1,052 | 71 | 90 | 33 | 9,258 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v11_Zandvliet.json.gz` | Zandvliet | 386 | 71 | 90 | 34 | 9,924 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v12_Inesco_Zelzate-Tj.json.gz` | Inesco, Zelzate Tj | 157 | 71 | 90 | 33 | 10,154 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v13_Aalst-Syral.json.gz` | Aalst Syral | 48 | 71 | 90 | 34 | 10,262 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v14_Sappi-Lanaken.json.gz` | Sappi Lanaken | 43 | 71 | 90 | 34 | 10,267 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v15_Zedelgem-Tj.json.gz` | Zedelgem Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v16_Herdersbrug_Monsanto-Oud-Lillo.json.gz` | Herdersbrug, Monsanto Oud Lillo | 508 | 71 | 90 | 33 | 9,802 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v17_Doel-4.json.gz` | Doel 4 | 1,090 | 71 | 90 | 34 | 9,220 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v18_Herdersbrug.json.gz` | Herdersbrug | 465 | 71 | 90 | 34 | 9,845 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v19_Zwijndrecht-Lanxes.json.gz` | Zwijndrecht Lanxess | 58 | 71 | 90 | 34 | 10,252 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v20_Biowanze_Monsanto-Oud-Lillo.json.gz` | Biowanze, Monsanto Oud Lillo | 69 | 71 | 90 | 33 | 10,241 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v21_Burgo-Ardennes_Marcinelle-Energie.json.gz` | Burgo Ardennes, Marcinelle Energie Carsid | 455 | 71 | 90 | 33 | 9,855 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v22_Cierreux-Tj_Noordschote-Tj.json.gz` | Cierreux Tj, Noordschote Tj | 37 | 71 | 90 | 33 | 10,273 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v23_Biowanze_Saint-Ghislain.json.gz` | Biowanze, Saint Ghislain | 376 | 71 | 90 | 33 | 9,934 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v24_Herdersbrug_Lillo-Degussa.json.gz` | Herdersbrug, Lillo Degussa | 550 | 71 | 90 | 33 | 9,760 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v25_Awirs.json.gz` | Awirs | 80 | 71 | 90 | 34 | 10,230 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v26_Beringen_Zandvliet.json.gz` | Beringen, Zandvliet | 808 | 71 | 90 | 33 | 9,502 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v27_Deux-Acren-Tj.json.gz` | Deux Acren Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v28_Jemeppe-Sur-Sambre_Zelzate-Tj.json.gz` | Jemeppe Sur Sambre, Zelzate Tj | 125 | 71 | 90 | 33 | 10,186 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v29_Drogenbos.json.gz` | Drogenbos | 460 | 71 | 90 | 34 | 9,850 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v30_Jemeppe-Sur-Sambre_Tihange-2.json.gz` | Jemeppe Sur Sambre, Tihange 2 | 1,161 | 71 | 90 | 33 | 9,149 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v31_Biowanze_Ringvaart.json.gz` | Biowanze, Ringvaart | 411 | 71 | 90 | 33 | 9,899 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v32_Cierreux-Tj_Zedelgem-Tj.json.gz` | Cierreux Tj, Zedelgem Tj | 37 | 71 | 90 | 33 | 10,273 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v33_Doel-4_Herdersbrug.json.gz` | Doel 4, Herdersbrug | 1,555 | 71 | 90 | 33 | 8,755 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | 6,255.2 MWh shed |
-| `v34_Jemeppe-Sur-Sambre.json.gz` | Jemeppe Sur Sambre | 106 | 71 | 90 | 34 | 10,204 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v35_Energie.json.gz` | Energie | 45 | 71 | 90 | 34 | 10,265 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v36_Doel-2_Noordschote-Tj.json.gz` | Doel 2, Noordschote Tj | 473 | 71 | 90 | 33 | 9,838 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v37_Beerse_Burgo-Ardennes.json.gz` | Beerse, Burgo Ardennes | 75 | 71 | 90 | 33 | 10,235 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v38_Aalter-Tj.json.gz` | Aalter Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v39_Rodenhuize.json.gz` | Rodenhuize | 205 | 71 | 90 | 34 | 10,105 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v40_Cierreux-Tj.json.gz` | Cierreux Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v41_Beerse_Drogenbos.json.gz` | Beerse, Drogenbos | 493 | 71 | 90 | 33 | 9,817 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v42_Burgo-Ardennes_Inesco.json.gz` | Burgo Ardennes, Inesco | 180 | 71 | 90 | 33 | 10,130 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v43_Marcinelle-Energie.json.gz` | Marcinelle Energie Carsid | 413 | 71 | 90 | 34 | 9,897 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v44_Doel-3_Tihange-1.json.gz` | Doel 3, Tihange 1 | 2,065 | 71 | 90 | 33 | 8,245 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | 46,423.0 MWh shed |
-| `v45_Zeebrugge-Tj.json.gz` | Zeebrugge Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v46_Awirs_Burgo-Ardennes.json.gz` | Awirs, Burgo Ardennes | 122 | 71 | 90 | 33 | 10,188 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v47_Doel-4_Inesco.json.gz` | Doel 4, Inesco | 1,228 | 71 | 90 | 33 | 9,082 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v48_Doel-2_Zandvliet.json.gz` | Doel 2, Zandvliet | 840 | 71 | 90 | 33 | 9,470 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v49_Beerse.json.gz` | Beerse | 33 | 71 | 90 | 34 | 10,277 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
-| `v50_Doel-2.json.gz` | Doel 2 | 454 | 71 | 90 | 34 | 9,856 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok |
+| Instance | Units removed | MW removed | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `v00_baseline.json.gz` | _none (baseline)_ | 0 | 71 | 90 | 35 | 10,310 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v00_baseline.png) |
+| `v01_Awirs_Scheldelaan-Exxonm.json.gz` | Awirs, Scheldelaan Exxonmobil | 220 | 71 | 90 | 33 | 10,090 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v01_Awirs_Scheldelaan-Exxonm.png) |
+| `v02_Zedelgem-Tj_Zeebrugge-Tj.json.gz` | Zedelgem Tj, Zeebrugge Tj | 37 | 71 | 90 | 33 | 10,273 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v02_Zedelgem-Tj_Zeebrugge-Tj.png) |
+| `v03_Marcinelle-Energie_Zandvliet.json.gz` | Marcinelle Energie Carsid, Zandvliet | 799 | 71 | 90 | 33 | 9,511 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v03_Marcinelle-Energie_Zandvliet.png) |
+| `v04_Drogenbos_Zeebrugge-Tj.json.gz` | Drogenbos, Zeebrugge Tj | 479 | 71 | 90 | 33 | 9,832 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v04_Drogenbos_Zeebrugge-Tj.png) |
+| `v05_Lillo-Degussa.json.gz` | Lillo Degussa | 85 | 71 | 90 | 34 | 10,225 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v05_Lillo-Degussa.png) |
+| `v06_Burgo-Ardennes.json.gz` | Burgo Ardennes | 42 | 71 | 90 | 34 | 10,268 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v06_Burgo-Ardennes.png) |
+| `v07_Doel-1_Zwijndrecht-Lanxes.json.gz` | Doel 1, Zwijndrecht Lanxess | 512 | 71 | 90 | 33 | 9,798 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v07_Doel-1_Zwijndrecht-Lanxes.png) |
+| `v08_Beringen_Burgo-Ardennes.json.gz` | Beringen, Burgo Ardennes | 464 | 71 | 90 | 33 | 9,846 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v08_Beringen_Burgo-Ardennes.png) |
+| `v09_Burgo-Ardennes_Zandvliet.json.gz` | Burgo Ardennes, Zandvliet | 428 | 71 | 90 | 33 | 9,882 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v09_Burgo-Ardennes_Zandvliet.png) |
+| `v10_Monsanto-Oud-Lillo_Tihange-1.json.gz` | Monsanto Oud Lillo, Tihange 1 | 1,052 | 71 | 90 | 33 | 9,258 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v10_Monsanto-Oud-Lillo_Tihange-1.png) |
+| `v11_Zandvliet.json.gz` | Zandvliet | 386 | 71 | 90 | 34 | 9,924 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v11_Zandvliet.png) |
+| `v12_Inesco_Zelzate-Tj.json.gz` | Inesco, Zelzate Tj | 157 | 71 | 90 | 33 | 10,154 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v12_Inesco_Zelzate-Tj.png) |
+| `v13_Aalst-Syral.json.gz` | Aalst Syral | 48 | 71 | 90 | 34 | 10,262 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v13_Aalst-Syral.png) |
+| `v14_Sappi-Lanaken.json.gz` | Sappi Lanaken | 43 | 71 | 90 | 34 | 10,267 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v14_Sappi-Lanaken.png) |
+| `v15_Zedelgem-Tj.json.gz` | Zedelgem Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v15_Zedelgem-Tj.png) |
+| `v16_Herdersbrug_Monsanto-Oud-Lillo.json.gz` | Herdersbrug, Monsanto Oud Lillo | 508 | 71 | 90 | 33 | 9,802 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v16_Herdersbrug_Monsanto-Oud-Lillo.png) |
+| `v17_Doel-4.json.gz` | Doel 4 | 1,090 | 71 | 90 | 34 | 9,220 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v17_Doel-4.png) |
+| `v18_Herdersbrug.json.gz` | Herdersbrug | 465 | 71 | 90 | 34 | 9,845 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v18_Herdersbrug.png) |
+| `v19_Zwijndrecht-Lanxes.json.gz` | Zwijndrecht Lanxess | 58 | 71 | 90 | 34 | 10,252 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v19_Zwijndrecht-Lanxes.png) |
+| `v20_Biowanze_Monsanto-Oud-Lillo.json.gz` | Biowanze, Monsanto Oud Lillo | 69 | 71 | 90 | 33 | 10,241 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v20_Biowanze_Monsanto-Oud-Lillo.png) |
+| `v21_Burgo-Ardennes_Marcinelle-Energie.json.gz` | Burgo Ardennes, Marcinelle Energie Carsid | 455 | 71 | 90 | 33 | 9,855 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v21_Burgo-Ardennes_Marcinelle-Energie.png) |
+| `v22_Cierreux-Tj_Noordschote-Tj.json.gz` | Cierreux Tj, Noordschote Tj | 37 | 71 | 90 | 33 | 10,273 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v22_Cierreux-Tj_Noordschote-Tj.png) |
+| `v23_Biowanze_Saint-Ghislain.json.gz` | Biowanze, Saint Ghislain | 376 | 71 | 90 | 33 | 9,934 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v23_Biowanze_Saint-Ghislain.png) |
+| `v24_Herdersbrug_Lillo-Degussa.json.gz` | Herdersbrug, Lillo Degussa | 550 | 71 | 90 | 33 | 9,760 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v24_Herdersbrug_Lillo-Degussa.png) |
+| `v25_Awirs.json.gz` | Awirs | 80 | 71 | 90 | 34 | 10,230 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v25_Awirs.png) |
+| `v26_Beringen_Zandvliet.json.gz` | Beringen, Zandvliet | 808 | 71 | 90 | 33 | 9,502 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v26_Beringen_Zandvliet.png) |
+| `v27_Deux-Acren-Tj.json.gz` | Deux Acren Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v27_Deux-Acren-Tj.png) |
+| `v28_Jemeppe-Sur-Sambre_Zelzate-Tj.json.gz` | Jemeppe Sur Sambre, Zelzate Tj | 125 | 71 | 90 | 33 | 10,186 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v28_Jemeppe-Sur-Sambre_Zelzate-Tj.png) |
+| `v29_Drogenbos.json.gz` | Drogenbos | 460 | 71 | 90 | 34 | 9,850 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v29_Drogenbos.png) |
+| `v30_Jemeppe-Sur-Sambre_Tihange-2.json.gz` | Jemeppe Sur Sambre, Tihange 2 | 1,161 | 71 | 90 | 33 | 9,149 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v30_Jemeppe-Sur-Sambre_Tihange-2.png) |
+| `v31_Biowanze_Ringvaart.json.gz` | Biowanze, Ringvaart | 411 | 71 | 90 | 33 | 9,899 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v31_Biowanze_Ringvaart.png) |
+| `v32_Cierreux-Tj_Zedelgem-Tj.json.gz` | Cierreux Tj, Zedelgem Tj | 37 | 71 | 90 | 33 | 10,273 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v32_Cierreux-Tj_Zedelgem-Tj.png) |
+| `v33_Doel-4_Herdersbrug.json.gz` | Doel 4, Herdersbrug | 1,555 | 71 | 90 | 33 | 8,755 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | 6,255.2 MWh shed | [plot](v33_Doel-4_Herdersbrug.png) |
+| `v34_Jemeppe-Sur-Sambre.json.gz` | Jemeppe Sur Sambre | 106 | 71 | 90 | 34 | 10,204 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v34_Jemeppe-Sur-Sambre.png) |
+| `v35_Energie.json.gz` | Energie | 45 | 71 | 90 | 34 | 10,265 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v35_Energie.png) |
+| `v36_Doel-2_Noordschote-Tj.json.gz` | Doel 2, Noordschote Tj | 473 | 71 | 90 | 33 | 9,838 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v36_Doel-2_Noordschote-Tj.png) |
+| `v37_Beerse_Burgo-Ardennes.json.gz` | Beerse, Burgo Ardennes | 75 | 71 | 90 | 33 | 10,235 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v37_Beerse_Burgo-Ardennes.png) |
+| `v38_Aalter-Tj.json.gz` | Aalter Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v38_Aalter-Tj.png) |
+| `v39_Rodenhuize.json.gz` | Rodenhuize | 205 | 71 | 90 | 34 | 10,105 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v39_Rodenhuize.png) |
+| `v40_Cierreux-Tj.json.gz` | Cierreux Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v40_Cierreux-Tj.png) |
+| `v41_Beerse_Drogenbos.json.gz` | Beerse, Drogenbos | 493 | 71 | 90 | 33 | 9,817 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v41_Beerse_Drogenbos.png) |
+| `v42_Burgo-Ardennes_Inesco.json.gz` | Burgo Ardennes, Inesco | 180 | 71 | 90 | 33 | 10,130 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v42_Burgo-Ardennes_Inesco.png) |
+| `v43_Marcinelle-Energie.json.gz` | Marcinelle Energie Carsid | 413 | 71 | 90 | 34 | 9,897 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v43_Marcinelle-Energie.png) |
+| `v44_Doel-3_Tihange-1.json.gz` | Doel 3, Tihange 1 | 2,065 | 71 | 90 | 33 | 8,245 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | 46,423.0 MWh shed | [plot](v44_Doel-3_Tihange-1.png) |
+| `v45_Zeebrugge-Tj.json.gz` | Zeebrugge Tj | 19 | 71 | 90 | 34 | 10,292 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v45_Zeebrugge-Tj.png) |
+| `v46_Awirs_Burgo-Ardennes.json.gz` | Awirs, Burgo Ardennes | 122 | 71 | 90 | 33 | 10,188 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v46_Awirs_Burgo-Ardennes.png) |
+| `v47_Doel-4_Inesco.json.gz` | Doel 4, Inesco | 1,228 | 71 | 90 | 33 | 9,082 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v47_Doel-4_Inesco.png) |
+| `v48_Doel-2_Zandvliet.json.gz` | Doel 2, Zandvliet | 840 | 71 | 90 | 33 | 9,470 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v48_Doel-2_Zandvliet.png) |
+| `v49_Beerse.json.gz` | Beerse | 33 | 71 | 90 | 34 | 10,277 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v49_Beerse.png) |
+| `v50_Doel-2.json.gz` | Doel 2 | 454 | 71 | 90 | 34 | 9,856 | 99 | 2 | 13,174 | 1,837,106 | -73,794 | ok | [plot](v50_Doel-2.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

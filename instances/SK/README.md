@@ -1,14 +1,14 @@
 # instances / SK
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `SK_2019_w06.json.gz` | SK | 2019-02-04 | 7 | 47 | 65 | 14 | 4,335 | 105 | 0 | 6,363 | 852,386 | 59,513 | ok |
-| `SK_2019_w21.json.gz` | SK | 2019-05-20 | 7 | 47 | 65 | 14 | 4,335 | 101 | 0 | 5,971 | 765,929 | -14,848 | ok |
-| `SK_2019_w25.json.gz` | SK | 2019-06-17 | 7 | 47 | 65 | 14 | 4,335 | 104 | 0 | 5,385 | 690,159 | 35,552 | ok |
-| `SK_2019_w39.json.gz` | SK | 2019-09-23 | 7 | 47 | 65 | 14 | 4,335 | 132 | 0 | 5,708 | 792,228 | 125,468 | ok |
-| `SK_2019_w52.json.gz` | SK | 2019-12-23 | 7 | 47 | 65 | 14 | 4,335 | 137 | 0 | 5,025 | 634,704 | -57,767 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `SK_2019_w06.json.gz` | SK | 2019-02-04 | 7 | 47 | 65 | 14 | 4,335 | 105 | 0 | 6,363 | 852,386 | 59,513 | ok | [plot](SK_2019_w06.png) |
+| `SK_2019_w21.json.gz` | SK | 2019-05-20 | 7 | 47 | 65 | 14 | 4,335 | 101 | 0 | 5,971 | 765,929 | -14,848 | ok | [plot](SK_2019_w21.png) |
+| `SK_2019_w25.json.gz` | SK | 2019-06-17 | 7 | 47 | 65 | 14 | 4,335 | 104 | 0 | 5,385 | 690,159 | 35,552 | ok | [plot](SK_2019_w25.png) |
+| `SK_2019_w39.json.gz` | SK | 2019-09-23 | 7 | 47 | 65 | 14 | 4,335 | 132 | 0 | 5,708 | 792,228 | 125,468 | ok | [plot](SK_2019_w39.png) |
+| `SK_2019_w52.json.gz` | SK | 2019-12-23 | 7 | 47 | 65 | 14 | 4,335 | 137 | 0 | 5,025 | 634,704 | -57,767 | ok | [plot](SK_2019_w52.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

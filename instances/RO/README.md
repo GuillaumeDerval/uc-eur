@@ -1,14 +1,14 @@
 # instances / RO
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `RO_2019_w19.json.gz` | RO | 2019-05-06 | 7 | 169 | 220 | 17 | 9,186 | 134 | 0 | 8,696 | 1,193,982 | -34,803 | ok |
-| `RO_2019_w29.json.gz` | RO | 2019-07-15 | 7 | 169 | 220 | 17 | 9,186 | 137 | 0 | 7,601 | 1,118,676 | 92,002 | ok |
-| `RO_2019_w36.json.gz` | RO | 2019-09-02 | 7 | 169 | 220 | 17 | 9,186 | 137 | 0 | 7,805 | 1,114,634 | 109,199 | ok |
-| `RO_2019_w38.json.gz` | RO | 2019-09-16 | 7 | 169 | 220 | 17 | 9,186 | 136 | 0 | 7,898 | 1,070,350 | 176,555 | ok |
-| `RO_2019_w39.json.gz` | RO | 2019-09-23 | 7 | 169 | 220 | 17 | 9,186 | 136 | 0 | 7,757 | 1,096,096 | 100,250 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `RO_2019_w19.json.gz` | RO | 2019-05-06 | 7 | 169 | 220 | 17 | 9,186 | 134 | 0 | 8,696 | 1,193,982 | -34,803 | ok | [plot](RO_2019_w19.png) |
+| `RO_2019_w29.json.gz` | RO | 2019-07-15 | 7 | 169 | 220 | 17 | 9,186 | 137 | 0 | 7,601 | 1,118,676 | 92,002 | ok | [plot](RO_2019_w29.png) |
+| `RO_2019_w36.json.gz` | RO | 2019-09-02 | 7 | 169 | 220 | 17 | 9,186 | 137 | 0 | 7,805 | 1,114,634 | 109,199 | ok | [plot](RO_2019_w36.png) |
+| `RO_2019_w38.json.gz` | RO | 2019-09-16 | 7 | 169 | 220 | 17 | 9,186 | 136 | 0 | 7,898 | 1,070,350 | 176,555 | ok | [plot](RO_2019_w38.png) |
+| `RO_2019_w39.json.gz` | RO | 2019-09-23 | 7 | 169 | 220 | 17 | 9,186 | 136 | 0 | 7,757 | 1,096,096 | 100,250 | ok | [plot](RO_2019_w39.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

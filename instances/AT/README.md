@@ -1,14 +1,14 @@
 # instances / AT
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `AT_2019_w03.json.gz` | AT | 2019-01-14 | 7 | 113 | 132 | 22 | 5,424 | 293 | 13 | 13,874 | 1,879,281 | 44,070 | ok |
-| `AT_2019_w17.json.gz` | AT | 2019-04-22 | 7 | 113 | 132 | 22 | 5,424 | 297 | 13 | 10,684 | 1,443,321 | -154,884 | ok |
-| `AT_2019_w25.json.gz` | AT | 2019-06-17 | 7 | 113 | 132 | 22 | 5,424 | 297 | 13 | 11,444 | 1,450,477 | -111,597 | ok |
-| `AT_2019_w27.json.gz` | AT | 2019-07-01 | 7 | 113 | 132 | 22 | 5,424 | 295 | 13 | 11,671 | 1,498,465 | -10,912 | ok |
-| `AT_2019_w49.json.gz` | AT | 2019-12-02 | 7 | 113 | 132 | 22 | 5,424 | 299 | 13 | 12,779 | 1,728,118 | 262,159 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `AT_2019_w03.json.gz` | AT | 2019-01-14 | 7 | 113 | 132 | 22 | 5,424 | 293 | 13 | 13,874 | 1,879,281 | 44,070 | ok | [plot](AT_2019_w03.png) |
+| `AT_2019_w17.json.gz` | AT | 2019-04-22 | 7 | 113 | 132 | 22 | 5,424 | 297 | 13 | 10,684 | 1,443,321 | -154,884 | ok | [plot](AT_2019_w17.png) |
+| `AT_2019_w25.json.gz` | AT | 2019-06-17 | 7 | 113 | 132 | 22 | 5,424 | 297 | 13 | 11,444 | 1,450,477 | -111,597 | ok | [plot](AT_2019_w25.png) |
+| `AT_2019_w27.json.gz` | AT | 2019-07-01 | 7 | 113 | 132 | 22 | 5,424 | 295 | 13 | 11,671 | 1,498,465 | -10,912 | ok | [plot](AT_2019_w27.png) |
+| `AT_2019_w49.json.gz` | AT | 2019-12-02 | 7 | 113 | 132 | 22 | 5,424 | 299 | 13 | 12,779 | 1,728,118 | 262,159 | ok | [plot](AT_2019_w49.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

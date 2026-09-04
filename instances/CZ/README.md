@@ -1,14 +1,14 @@
 # instances / CZ
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `CZ_2019_w17.json.gz` | CZ | 2019-04-22 | 7 | 67 | 108 | 46 | 16,460 | 192 | 1 | 11,183 | 1,477,383 | -135,055 | ok |
-| `CZ_2019_w35.json.gz` | CZ | 2019-08-26 | 7 | 67 | 108 | 46 | 16,460 | 187 | 1 | 11,062 | 1,572,005 | -282,397 | ok |
-| `CZ_2019_w39.json.gz` | CZ | 2019-09-23 | 7 | 67 | 108 | 46 | 16,460 | 187 | 1 | 12,541 | 1,742,869 | -323,071 | ok |
-| `CZ_2019_w46.json.gz` | CZ | 2019-11-11 | 7 | 67 | 108 | 46 | 16,460 | 190 | 1 | 12,458 | 1,725,647 | -270,492 | ok |
-| `CZ_2019_w52.json.gz` | CZ | 2019-12-23 | 7 | 67 | 108 | 46 | 16,460 | 192 | 1 | 9,904 | 1,319,878 | -209,440 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `CZ_2019_w17.json.gz` | CZ | 2019-04-22 | 7 | 67 | 108 | 46 | 16,460 | 192 | 1 | 11,183 | 1,477,383 | -135,055 | ok | [plot](CZ_2019_w17.png) |
+| `CZ_2019_w35.json.gz` | CZ | 2019-08-26 | 7 | 67 | 108 | 46 | 16,460 | 187 | 1 | 11,062 | 1,572,005 | -282,397 | ok | [plot](CZ_2019_w35.png) |
+| `CZ_2019_w39.json.gz` | CZ | 2019-09-23 | 7 | 67 | 108 | 46 | 16,460 | 187 | 1 | 12,541 | 1,742,869 | -323,071 | ok | [plot](CZ_2019_w39.png) |
+| `CZ_2019_w46.json.gz` | CZ | 2019-11-11 | 7 | 67 | 108 | 46 | 16,460 | 190 | 1 | 12,458 | 1,725,647 | -270,492 | ok | [plot](CZ_2019_w46.png) |
+| `CZ_2019_w52.json.gz` | CZ | 2019-12-23 | 7 | 67 | 108 | 46 | 16,460 | 192 | 1 | 9,904 | 1,319,878 | -209,440 | ok | [plot](CZ_2019_w52.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

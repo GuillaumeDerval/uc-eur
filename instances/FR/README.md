@@ -1,14 +1,14 @@
 # instances / FR
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `FR_2019_w14.json.gz` | FR | 2019-04-01 | 7 | 1,201 | 1,998 | 103 | 79,882 | 532 | 7 | 72,055 | 10,290,614 | -609,856 | ok |
-| `FR_2019_w29.json.gz` | FR | 2019-07-15 | 7 | 1,201 | 1,998 | 103 | 79,882 | 526 | 7 | 61,866 | 9,066,715 | -1,294,995 | ok |
-| `FR_2019_w31.json.gz` | FR | 2019-07-29 | 7 | 1,201 | 1,998 | 103 | 79,882 | 520 | 7 | 61,675 | 8,774,769 | -1,520,581 | ok |
-| `FR_2019_w34.json.gz` | FR | 2019-08-19 | 7 | 1,201 | 1,998 | 103 | 79,882 | 521 | 7 | 57,612 | 8,441,169 | -1,257,541 | ok |
-| `FR_2019_w36.json.gz` | FR | 2019-09-02 | 7 | 1,201 | 1,998 | 103 | 79,882 | 530 | 7 | 58,924 | 8,877,400 | -1,289,935 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `FR_2019_w14.json.gz` | FR | 2019-04-01 | 7 | 1,201 | 1,998 | 103 | 79,882 | 532 | 7 | 72,055 | 10,290,614 | -609,856 | ok | [plot](FR_2019_w14.png) |
+| `FR_2019_w29.json.gz` | FR | 2019-07-15 | 7 | 1,201 | 1,998 | 103 | 79,882 | 526 | 7 | 61,866 | 9,066,715 | -1,294,995 | ok | [plot](FR_2019_w29.png) |
+| `FR_2019_w31.json.gz` | FR | 2019-07-29 | 7 | 1,201 | 1,998 | 103 | 79,882 | 520 | 7 | 61,675 | 8,774,769 | -1,520,581 | ok | [plot](FR_2019_w31.png) |
+| `FR_2019_w34.json.gz` | FR | 2019-08-19 | 7 | 1,201 | 1,998 | 103 | 79,882 | 521 | 7 | 57,612 | 8,441,169 | -1,257,541 | ok | [plot](FR_2019_w34.png) |
+| `FR_2019_w36.json.gz` | FR | 2019-09-02 | 7 | 1,201 | 1,998 | 103 | 79,882 | 530 | 7 | 58,924 | 8,877,400 | -1,289,935 | ok | [plot](FR_2019_w36.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

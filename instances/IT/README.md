@@ -1,14 +1,14 @@
 # instances / IT
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `IT_2019_w05.json.gz` | IT | 2019-01-28 | 7 | 572 | 842 | 116 | 53,998 | 1,182 | 15 | 48,824 | 6,219,801 | 945,845 | ok |
-| `IT_2019_w13.json.gz` | IT | 2019-03-25 | 7 | 572 | 842 | 116 | 53,998 | 1,181 | 15 | 43,280 | 5,493,061 | 906,869 | ok |
-| `IT_2019_w15.json.gz` | IT | 2019-04-08 | 7 | 572 | 842 | 116 | 53,998 | 1,182 | 15 | 43,485 | 5,532,242 | 724,501 | ok |
-| `IT_2019_w16.json.gz` | IT | 2019-04-15 | 7 | 572 | 842 | 116 | 53,998 | 1,182 | 15 | 41,829 | 5,214,786 | 696,564 | ok |
-| `IT_2019_w37.json.gz` | IT | 2019-09-09 | 7 | 572 | 842 | 116 | 53,998 | 1,180 | 15 | 43,846 | 5,775,206 | 510,796 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `IT_2019_w05.json.gz` | IT | 2019-01-28 | 7 | 572 | 842 | 116 | 53,998 | 1,182 | 15 | 48,824 | 6,219,801 | 945,845 | ok | [plot](IT_2019_w05.png) |
+| `IT_2019_w13.json.gz` | IT | 2019-03-25 | 7 | 572 | 842 | 116 | 53,998 | 1,181 | 15 | 43,280 | 5,493,061 | 906,869 | ok | [plot](IT_2019_w13.png) |
+| `IT_2019_w15.json.gz` | IT | 2019-04-08 | 7 | 572 | 842 | 116 | 53,998 | 1,182 | 15 | 43,485 | 5,532,242 | 724,501 | ok | [plot](IT_2019_w15.png) |
+| `IT_2019_w16.json.gz` | IT | 2019-04-15 | 7 | 572 | 842 | 116 | 53,998 | 1,182 | 15 | 41,829 | 5,214,786 | 696,564 | ok | [plot](IT_2019_w16.png) |
+| `IT_2019_w37.json.gz` | IT | 2019-09-09 | 7 | 572 | 842 | 116 | 53,998 | 1,180 | 15 | 43,846 | 5,775,206 | 510,796 | ok | [plot](IT_2019_w37.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

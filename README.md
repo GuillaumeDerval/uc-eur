@@ -234,6 +234,43 @@ python describe_instances.py instances instances_BE_52weeks instances_BE_outages
 For an outage family the table replaces country and date with the units removed
 and the capacity lost, since those are what vary.
 
+### Plotting the commitment
+
+`julia/dispatch_series.jl` solves each instance and dumps the per-step series a
+commitment plot needs; `plot_instances.py` renders them:
+
+```bash
+julia --project=julia julia/dispatch_series.jl instances
+python plot_instances.py instances
+```
+
+Each plot shows demand net of every non-committable source (wind, solar,
+run-of-river, imports, measured-generation carriers and storage) against the
+capacity committed at the optimum, with the minimum stable level those
+committed units impose as the lower edge of the band. The residual line must
+lie inside the band; that is the commitment constraint made visible.
+
+**How much do the 0-1 decisions actually matter?** Across the 115 instances the
+committed set changes a median of 8 times per week and a mean of 26, and only
+15% have two changes or fewer:
+
+| Most dynamic | changes/week | Most static | changes/week |
+|---|---|---|---|
+| IT | 113 | LV | 1.0 |
+| FI | 104 | BE | 1.6 |
+| DK | 88 | BG | 2.8 |
+| SE | 44 | SI | 4.4 |
+| DE | 41 | PL | 5.2 |
+
+Belgium is close to the least dynamic country in the set: its residual demand
+swings only 1.5x and the minimum stable level of its committed fleet sits
+2238 MW below the trough, so no unit is ever forced off and cycling would only
+add startup cost. Italy, by contrast, moves its committed capacity by 80% and
+visits 24 distinct commitment states in a week. Raising `--co2-price` from its
+default of 0 towards the 2019 EU ETS level of about 25 EUR/t makes cycling
+sharply more attractive in coal- and lignite-heavy systems, if you want the
+commitment decisions to bite harder.
+
 ### Measuring congestion
 
 `julia/congestion.jl` solves each instance twice, once as generated and once
@@ -502,6 +539,8 @@ generate.py                CLI for a single instance
 generate_batch.py          eligibility screen + the per-country benchmark set
 generate_outages.py        an outage family: one week, varying available units
 describe_instances.py      README.md tables for every instance directory
+plot_instances.py          commitment plots from the dispatch series
+julia/dispatch_series.jl   solve and dump the per-step dispatch series
 pypsa_uc_gen/sources.py    fetches and caches the seven datasets
 pypsa_uc_gen/build.py      datasets -> pypsa.Network, with a provenance report
 pypsa_uc_gen/convert.py    pypsa.Network -> UnitCommitment.jl 0.4

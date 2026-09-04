@@ -1,14 +1,14 @@
 # instances / BE
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `BE_2019_w20.json.gz` | BE | 2019-05-13 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 12,715 | 1,802,768 | 12,802 | ok |
-| `BE_2019_w26.json.gz` | BE | 2019-06-24 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 12,878 | 1,808,276 | 49,082 | ok |
-| `BE_2019_w32.json.gz` | BE | 2019-08-05 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 13,670 | 1,914,320 | -394,424 | ok |
-| `BE_2019_w33.json.gz` | BE | 2019-08-12 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 12,723 | 1,886,721 | -294,182 | ok |
-| `BE_2019_w51.json.gz` | BE | 2019-12-16 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 15,011 | 2,047,319 | -49,738 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `BE_2019_w20.json.gz` | BE | 2019-05-13 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 12,715 | 1,802,768 | 12,802 | ok | [plot](BE_2019_w20.png) |
+| `BE_2019_w26.json.gz` | BE | 2019-06-24 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 12,878 | 1,808,276 | 49,082 | ok | [plot](BE_2019_w26.png) |
+| `BE_2019_w32.json.gz` | BE | 2019-08-05 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 13,670 | 1,914,320 | -394,424 | ok | [plot](BE_2019_w32.png) |
+| `BE_2019_w33.json.gz` | BE | 2019-08-12 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 12,723 | 1,886,721 | -294,182 | ok | [plot](BE_2019_w33.png) |
+| `BE_2019_w51.json.gz` | BE | 2019-12-16 | 7 | 71 | 90 | 35 | 10,310 | 99 | 2 | 15,011 | 2,047,319 | -49,738 | ok | [plot](BE_2019_w51.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 

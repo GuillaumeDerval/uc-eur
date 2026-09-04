@@ -1,14 +1,14 @@
 # instances / IE
 
-5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run.
+5 instances. Columns come from each instance's `.summary.json`; *Solved* is from the last `solve_all.jl` run, and *Dispatch* links a plot of demand net of non-committable generation against the capacity committed at the optimum.
 
-| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `IE_2019_w16.json.gz` | IE | 2019-04-15 | 7 | 56 | 71 | 15 | 5,342 | 122 | 1 | 4,757 | 576,358 | -5,072 | ok |
-| `IE_2019_w21.json.gz` | IE | 2019-05-20 | 7 | 56 | 71 | 15 | 5,342 | 122 | 1 | 3,863 | 538,525 | 27,932 | ok |
-| `IE_2019_w22.json.gz` | IE | 2019-05-27 | 7 | 56 | 71 | 15 | 5,342 | 75 | 1 | 4,297 | 566,299 | -41,546 | ok |
-| `IE_2019_w46.json.gz` | IE | 2019-11-11 | 7 | 56 | 71 | 15 | 5,342 | 122 | 1 | 5,040 | 657,934 | -24,668 | ok |
-| `IE_2019_w47.json.gz` | IE | 2019-11-18 | 7 | 56 | 71 | 15 | 5,342 | 122 | 1 | 5,063 | 647,904 | -14,380 | ok |
+| Instance | Country | Start (UTC) | Days | Buses | Branches | Thermal units | Thermal MW | Profiled | Storage | Peak MW | Demand MWh | Net imports MWh | Solved | Dispatch |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `IE_2019_w16.json.gz` | IE | 2019-04-15 | 7 | 56 | 71 | 15 | 5,342 | 122 | 1 | 4,757 | 576,358 | -5,072 | ok | [plot](IE_2019_w16.png) |
+| `IE_2019_w21.json.gz` | IE | 2019-05-20 | 7 | 56 | 71 | 15 | 5,342 | 122 | 1 | 3,863 | 538,525 | 27,932 | ok | [plot](IE_2019_w21.png) |
+| `IE_2019_w22.json.gz` | IE | 2019-05-27 | 7 | 56 | 71 | 15 | 5,342 | 75 | 1 | 4,297 | 566,299 | -41,546 | ok | [plot](IE_2019_w22.png) |
+| `IE_2019_w46.json.gz` | IE | 2019-11-11 | 7 | 56 | 71 | 15 | 5,342 | 122 | 1 | 5,040 | 657,934 | -24,668 | ok | [plot](IE_2019_w46.png) |
+| `IE_2019_w47.json.gz` | IE | 2019-11-18 | 7 | 56 | 71 | 15 | 5,342 | 122 | 1 | 5,063 | 647,904 | -14,380 | ok | [plot](IE_2019_w47.png) |
 
 <details><summary>Provenance and exclusions for this directory</summary>
 
