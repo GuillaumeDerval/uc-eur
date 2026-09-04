@@ -266,10 +266,27 @@ Belgium is close to the least dynamic country in the set: its residual demand
 swings only 1.5x and the minimum stable level of its committed fleet sits
 2238 MW below the trough, so no unit is ever forced off and cycling would only
 add startup cost. Italy, by contrast, moves its committed capacity by 80% and
-visits 24 distinct commitment states in a week. Raising `--co2-price` from its
-default of 0 towards the 2019 EU ETS level of about 25 EUR/t makes cycling
-sharply more attractive in coal- and lignite-heavy systems, if you want the
-commitment decisions to bite harder.
+visits 24 distinct commitment states in a week.
+
+What decides this is whether the committed floor sits above or below the
+residual trough, not the fuel price. A carbon price does **not** sharpen the
+0-1 decisions, which is worth recording because it is a natural guess:
+regenerating the five most static cases with `--co2-price 25` made three of
+them *more* static, not less.
+
+| Case | changes/week, CO2 = 0 -> 25 | units on |
+|---|---|---|
+| PL w08 | 5 -> 2 | 35-39 -> 48-49 |
+| PL w46 | 4 -> 4 | 37-39 -> 47-50 |
+| CZ w17 | 8 -> 25 | 20-32 -> 11-31 |
+| BG w14 | 5 -> 4 | 9-13 -> 9-12 |
+| HU w41 | 5 -> 1 | 18-20 -> 14-15 |
+
+Carbon cost lands on energy, not on the start/stop trade-off: it reorders merit
+so Poland commits *more* units and runs each at lower output, flattening the
+commitment rather than sharpening it. `--co2-price` therefore remains a
+realism knob (the 2019 EU ETS averaged about 25 EUR/t) and defaults to 0, which
+is an explicit choice rather than an oversight.
 
 ### Measuring congestion
 
